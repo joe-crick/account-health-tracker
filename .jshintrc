@@ -16,5 +16,10 @@
   "strict": false,
   "trailing": true,
   "smarttabs": true,
-  "white": false
+  "white": false,
+  "browser": true,
+  "mocha": true,
+  "globals": {
+    "System": true
+  }
 }

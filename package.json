@@ -15,7 +15,7 @@
     "document": "documentjs",
     "build": "npm run clean && node bin/build",
     "clean": "rimraf build && rimraf dist",
-    "jshint": "jshint --config src/."
+    "jshint": "jshint src/. --config"
   },
   "main": "account-health-tracker/index.stache!done-autorender",
   "files": [
