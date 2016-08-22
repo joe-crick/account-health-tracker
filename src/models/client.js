@@ -7,7 +7,7 @@ export const Client = DefineMap.extend({
   seal: false
 }, {
   id: 'number',
-  name: 'string'
+  name: 'string',
   companyId: 'number'
 });
 

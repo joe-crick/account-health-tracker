@@ -9,7 +9,6 @@ const store = fixture.store([{
 }]);
 
 fixture({
-  'GET /': store.findAll,
   'GET /': store.findOne,
   'POST /': store.create,
   'PUT /': store.update,

@@ -8,7 +8,7 @@ export const KPI = DefineMap.extend({
 }, {
   id: 'number',
   clientId: 'number',
-  projectId: 'number'
+  projectId: 'number',
   name: 'string',
   timestamp: 'date'
 });
