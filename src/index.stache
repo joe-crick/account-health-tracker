@@ -5,8 +5,14 @@
   <body>
     <can-import from="account-health-tracker/styles.less!" />
     <can-import from="account-health-tracker/app" export-as="viewModel" />
+    <can-import from="account-health-tracker/components/dashboard/" />
 
-    <h1>{{message}}</h1>
+    <div class="container">
+      <header></header>
+      <main>
+        <aht-dashboard />
+      </main>
+    </div>
 
     {{#switch env.NODE_ENV}}
       {{#case "production"}}
