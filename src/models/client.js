@@ -6,7 +6,9 @@ import tag from 'can-connect/can/tag/';
 export const Client = DefineMap.extend({
   seal: false
 }, {
-  'id': '*'
+  id: 'number',
+  name: 'string'
+  companyId: 'number'
 });
 
 Client.List = DefineList.extend({
@@ -14,7 +16,7 @@ Client.List = DefineList.extend({
 });
 
 export const clientConnection = superMap({
-  url: '/dashboard/clients',
+  url: '/clients',
   idProp: 'id',
   Map: Client,
   List: Client.List,

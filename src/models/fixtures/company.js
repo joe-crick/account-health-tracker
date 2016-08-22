@@ -9,11 +9,11 @@ const store = fixture.store([{
 }]);
 
 fixture({
-  'GET /dashboard': store.findAll,
-  'GET /dashboard/{id}': store.findOne,
-  'POST /dashboard': store.create,
-  'PUT /dashboard/{id}': store.update,
-  'DELETE /dashboard/{id}': store.destroy
+  'GET /': store.findAll,
+  'GET /': store.findOne,
+  'POST /': store.create,
+  'PUT /': store.update,
+  'DELETE /': store.destroy
 });
 
 export default store;

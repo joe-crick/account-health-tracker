@@ -9,11 +9,11 @@ const store = fixture.store([{
 }]);
 
 fixture({
-  'GET /dashboard/kpis': store.findAll,
-  'GET /dashboard/kpis/{id}': store.findOne,
-  'POST /dashboard/kpis': store.create,
-  'PUT /dashboard/kpis/{id}': store.update,
-  'DELETE /dashboard/kpis/{id}': store.destroy
+  'GET /clients/{clientId}/projects/{projectId}/kpis': store.findAll,
+  'GET /clients/{clientId}/projects/{projectId}/kpis/{id}': store.findOne,
+  'POST /clients/{clientId}/projects/{projectId}/kpis': store.create,
+  'PUT /clients/{clientId}/projects/{projectId}/kpis/{id}': store.update,
+  'DELETE /clients/{clientId}/projects/{projectId}/kpis/{id}': store.destroy
 });
 
 export default store;

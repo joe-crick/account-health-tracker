@@ -6,7 +6,11 @@ import tag from 'can-connect/can/tag/';
 export const KPI = DefineMap.extend({
   seal: false
 }, {
-  'id': '*'
+  id: 'number',
+  clientId: 'number',
+  projectId: 'number'
+  name: 'string',
+  timestamp: 'date'
 });
 
 KPI.List = DefineList.extend({
@@ -14,7 +18,7 @@ KPI.List = DefineList.extend({
 });
 
 export const kpiConnection = superMap({
-  url: '/dashboard/kpis',
+  url: '/clients/{clientId}/projects/{projectId}/kpis',
   idProp: 'id',
   Map: KPI,
   List: KPI.List,
