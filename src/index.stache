@@ -3,7 +3,7 @@
     <title>{{title}}</title>
   </head>
   <body>
-    <can-import from="account-health-tracker/styles.less!" />
+    <can-import from="account-health-tracker/styles.less" />
     <can-import from="account-health-tracker/app" export-as="viewModel" />
     <can-import from="account-health-tracker/components/header/header" />
     <can-import from="account-health-tracker/components/dashboard/" />
