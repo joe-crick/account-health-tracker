@@ -1,0 +1,13 @@
+<header class="col-md-8">
+  <h1>Dashboard</h1>
+</header>
+<nav class="col-md-4">
+  <ul class="nav nav-pills">
+    <li>
+      <a href="{{routeUrl page='home'}}">Home</a>
+    </li>
+    <li>
+      <a href="{{routeUrl page='admin'}}">Admin</a>
+    </li>
+  </ul>
+</nav>

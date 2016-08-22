@@ -1,5 +1,5 @@
 import Map from "can/map/";
-// import route from "can/route/";
+import route from "can/route/";
 import 'can/map/define/';
 import 'can/route/pushstate/';
 
@@ -15,5 +15,7 @@ const AppViewModel = Map.extend({
     }
   }
 });
+
+route(':page', { page: 'home' });
 
 export default AppViewModel;
