@@ -7,8 +7,8 @@ const AppViewModel = DefineMap.extend({
   page: 'string',
   title: {
     value: 'account-health-tracker',
-    serialize: false
-  }
+    serialize: false,
+  },
 });
 
 route(':page', { page: 'home' });

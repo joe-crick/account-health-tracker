@@ -8,6 +8,6 @@ export const ViewModel = DefineMap.extend({
 
 export default Component.extend({
   tag: 'aht-header',
-  ViewModel: ViewModel,
-  template
+  ViewModel,
+  template,
 });

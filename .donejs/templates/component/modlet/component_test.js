@@ -2,12 +2,12 @@ import 'steal-mocha';
 import chai from 'chai';
 import { ViewModel } from './<%= name %>';
 
-let assert = chai.assert;
+const assert = chai.assert;
 
 // ViewModel unit tests
-describe('<%= module %>', function(){
-  it('Has message', function(){
-    var vm = new ViewModel();
+describe('<%= module %>', function <%= module %>VMTests() {
+  it('Has message', function() {
+    const vm = new ViewModel();
     assert.equal(vm.message, 'This is the <%= tag %> component');
   });
 });
