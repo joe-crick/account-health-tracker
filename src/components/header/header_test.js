@@ -1,5 +1,5 @@
 import 'steal-mocha';
-import chai from 'chai';
+// import chai from 'chai';
 // import { ViewModel } from './header';
 
 // let assert = chai.assert;
