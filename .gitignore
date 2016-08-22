@@ -32,4 +32,6 @@ docs/
 build/
 dist/
 cache/
+
+# PHP Storm
 .idea/
