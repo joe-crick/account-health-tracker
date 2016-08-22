@@ -4,7 +4,7 @@ import <%= className %> from './<%= name %>';
 
 const assert = chai.assert;
 
-describe('models/<%= name %>', function <%= module %>Tests() {
+describe('models/<%= name %>', function <%= className %>Tests() {
   it('getList', function(done) {
     <%= className %>.getList().then(function(items) {
       assert.equal(items.length, 2);
