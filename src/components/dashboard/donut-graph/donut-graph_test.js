@@ -8,6 +8,6 @@ let assert = chai.assert;
 describe('account-health-tracker/components/dashboard/donut-graph', function(){
   it('Has message', function(){
     var vm = new ViewModel();
-    assert.equal(vm.attr('message'), 'This is the aht-donut-graph component');
+    assert.equal(vm.message, 'This is the aht-donut-graph component');
   });
 });

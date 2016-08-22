@@ -1,15 +1,13 @@
-import Map from "can/map/";
-import route from "can/route/";
-import 'can/map/define/';
-import 'can/route/pushstate/';
-import 'bootstrap/js/collapse';
+import DefineMap from 'can-define/map/';
+import route from 'can-route';
+import 'can-route-pushstate';
 
-const AppViewModel = Map.extend({
-  define: {
-    title: {
-      value: 'account-health-tracker',
-      serialize: false
-    }
+const AppViewModel = DefineMap.extend({
+  route: 'string',
+  page: 'string',
+  title: {
+    value: 'account-health-tracker',
+    serialize: false
   }
 });
 
