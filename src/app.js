@@ -6,10 +6,6 @@ import 'bootstrap/js/collapse';
 
 const AppViewModel = Map.extend({
   define: {
-    message: {
-      value: 'Hello World!',
-      serialize: false
-    },
     title: {
       value: 'account-health-tracker',
       serialize: false

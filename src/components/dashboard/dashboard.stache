@@ -1,0 +1,22 @@
+<can-import from="account-health-tracker/components/dashboard/footer/" />
+<can-import from="account-health-tracker/components/dashboard/donut-graph/" />
+<can-import from="account-health-tracker/components/dashboard/bar-graph/" />
+
+<p>{{message}}</p>
+
+<div class="row">
+  <div class="col-sm-8">
+    <h1>Bitovi</h1>
+    <p>Overall Health</p>
+  </div>
+  <div class="col-sm-4">
+    <aht-donut-graph />
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <aht-bar-graph />
+  </div>
+</div>
+
+<aht-footer />

@@ -6,9 +6,15 @@
     <can-import from="account-health-tracker/styles.less!" />
     <can-import from="account-health-tracker/app" export-as="viewModel" />
     <can-import from="account-health-tracker/components/header/header" />
+    <can-import from="account-health-tracker/components/dashboard/" />
 
     <div class="container">
-      <aht-header class="row" />
+      <header>
+        <aht-header class="row" />
+      </header>
+      <main>
+        <aht-dashboard />
+      </main>
     </div>
 
     {{#switch env.NODE_ENV}}
