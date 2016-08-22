@@ -9,13 +9,13 @@
     "url": "http://bitovi.com"
   },
   "scripts": {
-    "test": "npm run jshint && testee src/test.html --browsers chromium --reporter Spec",
+    "test": "npm run lint && testee src/test.html --browsers chromium --reporter Spec",
     "start": "done-serve --port 8080",
     "develop": "done-serve --develop --port 8080",
     "document": "documentjs",
     "build": "npm run clean && node bin/build",
     "clean": "rimraf build && rimraf dist",
-    "jshint": "jshint src/. --config"
+    "lint": "eslint src test"
   },
   "main": "account-health-tracker/index.stache!done-autorender",
   "files": [
@@ -37,7 +37,9 @@
     },
     "meta": {
       "bootstrap/js/collapse": {
-        "deps": ["jquery"]
+        "deps": [
+          "jquery"
+        ]
       }
     }
   },
@@ -67,6 +69,9 @@
     "documentjs": "^0.4.4",
     "donejs-cli": "^0.10.0-pre.0",
     "donejs-deploy": "^0.4.2",
+    "eslint": "^3.3.1",
+    "eslint-config-airbnb-base": "^5.0.3",
+    "eslint-plugin-import": "^1.14.0",
     "funcunit": "~3.1.0-pre.1",
     "jshint": "^2.9.3",
     "steal-mocha": "0.0.3",
