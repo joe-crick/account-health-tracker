@@ -1,0 +1,26 @@
+import DefineMap from 'can-define/map/';
+import DefineList from 'can-define/list/';
+import superMap from 'can-connect/can/super-map/';
+import tag from 'can-connect/can/tag/';
+
+export const Client = DefineMap.extend({
+  seal: false
+}, {
+  'id': '*'
+});
+
+Client.List = DefineList.extend({
+  '*': Client
+});
+
+export const clientConnection = superMap({
+  url: '/dashboard/clients',
+  idProp: 'id',
+  Map: Client,
+  List: Client.List,
+  name: 'client'
+});
+
+tag('client-model', clientConnection);
+
+export default Client;
