@@ -18,5 +18,8 @@
     <aht-bar-graph />
   </div>
 </div>
-
-<aht-footer />
+<div class="row">
+  <div class="col-sm-3 col-sm-offset-9">
+    <aht-footer />
+  </div>
+</div>

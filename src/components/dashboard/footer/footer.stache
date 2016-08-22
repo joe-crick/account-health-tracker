@@ -1,1 +1,18 @@
-<p>{{message}}</p>
+<can-import from="bootstrap/js/dropdown" />
+
+<button class="btn btn-default" type="button" aria-label="Add" disabled>
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</button>
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="export-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled>
+    <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+    Export
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="export-options">
+    <li><a href="#">Foo</a></li>
+    <li><a href="#">Bar</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Baz</a></li>
+  </ul>
+</div>
