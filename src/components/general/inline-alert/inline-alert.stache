@@ -1,3 +1,5 @@
+<can-import from="bootstrap/js/dropdown" />
+
 <div class="jumbotron">
     <h1>{{alertTitle}}</h1>
     <p>{{message}}</p>
