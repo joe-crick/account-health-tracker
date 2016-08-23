@@ -8,3 +8,4 @@ export function registeri18nHelper(translationFn) {
     return translationFn(key);
   });
 }
+

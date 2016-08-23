@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/bitovi/account-health-tracker.svg?token=xTAmryZjTVyQKNkBxqdT&branch=master)](https://travis-ci.com/bitovi/account-health-tracker)
+
 # account-health-tracker
 
 Welcome to the account-health-tracker DoneJS application!
