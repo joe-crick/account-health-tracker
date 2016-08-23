@@ -4,9 +4,18 @@ import './bar-graph.less!';
 import template from './bar-graph.stache!';
 
 export const ViewModel = DefineMap.extend({
-  message: {
-    value: 'This is the aht-bar-graph component',
+  kpis: {
+    get(last, set){
+      this.get('kpiPromise').then(set);
+    }
   },
+  kpiPromise: {
+    get() {
+      return new Promise((resolve, reject) => {
+        reject(new Error());
+      })
+    }
+  }
 });
 
 export default Component.extend({

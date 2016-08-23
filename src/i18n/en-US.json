@@ -10,6 +10,10 @@
       }
     },
     "dashboard": {
+      "barChart": {
+        "getKpisErrorTitle": "Bar Graph Error",
+        "getKpisErrorMessage": "We were unable"
+      },
       "clients": {
 
       },

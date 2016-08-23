@@ -1,1 +1,22 @@
-<p>{{message}}</p>
+<can-import from="account-health-tracker/components/general/inline-alert/" />
+<can-import from="bit-c3"/>
+{{#if kpiPromise.isResolved}}
+<bit-c3>
+    <bit-c3-data type="{{type}}">
+      {{#each kpis}}
+          <bit-c3-data-column {value}="."/>
+      {{/each}}
+        <bit-c3-data-group {value}="dataGroup"/>
+    </bit-c3-data>
+    <bit-c3-y-grid>
+      {{#each yGridLines}}
+          <bit-c3-y-grid-line value="{{value}}"/>
+      {{/each}}
+    </bit-c3-y-grid>
+</bit-c3>
+{{else}}
+    <aht-inline-alert
+            alert-title="{{i18n 'dashboard.barChart.getKpisErrorTitle'}}"
+            message="{{i18n 'dashboard.barChart.getKpisErrorMessage'}}" >
+    </aht-inline-alert>
+{{/if}}
