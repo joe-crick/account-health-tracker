@@ -12,7 +12,7 @@ Below are a few relevant links for this project:
 
  - [Requirements](https://docs.google.com/document/d/1CtEKVizdT5nqX7Yb3ymWshR27sKLQo3VVoMo-ZzjBa4/edit)
     - [Project Proposal](https://docs.google.com/document/d/1f_Gt1fkquagXW63IaUPNEcLD6KiaJMY45t5Jj6iQE_Q/edit): May add further detail to the requirements.
- - [Project Presentation](https://docs.google.com/document/d/1CtEKVizdT5nqX7Yb3ymWshR27sKLQo3VVoMo-ZzjBa4/edit)
+ - [Project Presentation](https://docs.google.com/presentation/d/1b27MbJzDhoPTnDpNv0ulTo7sCLTAs4CUOslIm8mVyZc/edit#slide=id.g35f391192_00)
  - [Test Suite](https://ahm.testlodge.com/projects/18661/test_runs/224447/run?user_id=27211)
  - [API Docs](https://github.com/bitovi/account-health-tracker/wiki/API)
 
