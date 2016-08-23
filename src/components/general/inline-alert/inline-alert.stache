@@ -3,7 +3,7 @@
     <p>{{message}}</p>
     {{#if action}}
     <p>
-        <button class="btn btn-primary btn-lg" ($click)="{action}">{{buttonLabel}}</button>
+        <button class="btn btn-primary btn-lg" ($click)="action">{{buttonLabel}}</button>
     </p>
     {{/if}}
 </div>
