@@ -1,12 +1,12 @@
 <can-import from="bootstrap/js/dropdown" />
 
-<button class="btn btn-default" type="button" aria-label="Add" disabled>
+<button class="btn btn-default" type="button" aria-label="{{i18n 'dashboard.footer.actions.add'}}" disabled>
   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 </button>
 <div class="dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" id="export-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled>
     <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
-    Export
+    {{i18n 'dashboard.footer.actions.export'}}
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="export-options">
