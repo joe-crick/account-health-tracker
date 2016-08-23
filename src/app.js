@@ -1,7 +1,7 @@
 import DefineMap from 'can-define/map/';
 import route from 'can-route';
 import 'can-route-pushstate';
-import translation from 'translation';
+import translation from 'account-health-tracker/translation';
 
 const AppViewModel = DefineMap.extend({
   route: 'string',
