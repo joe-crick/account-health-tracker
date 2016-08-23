@@ -40,6 +40,11 @@
         "deps": [
           "jquery"
         ]
+      },
+      "bootstrap/js/dropdown": {
+        "deps": [
+          "jquery"
+        ]
       }
     }
   },
