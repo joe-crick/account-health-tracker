@@ -1,12 +1,7 @@
 import fixture from 'can-fixture';
+import kpiData from './kpi.json';
 
-const store = fixture.store([{
-  id: 0,
-  description: 'First item'
-}, {
-  id: 1,
-  description: 'Second item'
-}]);
+const store = fixture.store(kpiData);
 
 fixture({
   'GET /clients/{clientId}/projects/{projectId}/kpis': store.findAll,

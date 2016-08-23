@@ -1,6 +1,6 @@
 import DefineMap from 'can-define/map/';
 import DefineList from 'can-define/list/';
-import superMap from 'can-connect/can/super-map/';
+import superMap from './connection/superMap';
 import tag from 'can-connect/can/tag/';
 
 export const Client = DefineMap.extend({

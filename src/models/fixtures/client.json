@@ -1,0 +1,21 @@
+[{
+  "id": 1,
+  "name": "Apple",
+  "companyId": 1
+}, {
+  "id": 2,
+  "name": "Lowe's",
+  "companyId": 1
+}, {
+  "id": 3,
+  "name": "HaulHound",
+  "companyId": 1
+}, {
+  "id": 4,
+  "name": "EgoWall",
+  "companyId": 1
+}, {
+  "id": 5,
+  "name": "Levi's",
+  "companyId": 1
+}]

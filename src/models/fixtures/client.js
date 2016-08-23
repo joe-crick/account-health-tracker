@@ -1,12 +1,7 @@
 import fixture from 'can-fixture';
+import clientData from './client.json';
 
-const store = fixture.store([{
-  id: 0,
-  description: 'First item'
-}, {
-  id: 1,
-  description: 'Second item'
-}]);
+const store = fixture.store(clientData);
 
 fixture({
   'GET /clients': store.findAll,
