@@ -12,7 +12,7 @@ const AppViewModel = DefineMap.extend({
   },
   locale: {
     type: 'string',
-    value: 'en-Us'
+    value: 'en-US'
   },
   i18nInterpreter: {
     get() {

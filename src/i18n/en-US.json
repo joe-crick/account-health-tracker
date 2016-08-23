@@ -1,10 +1,27 @@
 {
-  "dashboard": {
-    "clients": {
-
+  "translation": {
+    "title": "Account Health Tracker",
+    "header": {
+      "title": "Dashboard",
+      "navigation": {
+        "home": "Home",
+        "admin": "Admin",
+        "toggle": "Toggle navigation"
+      }
     },
-    "company": {
+    "dashboard": {
+      "clients": {
 
+      },
+      "company": {
+
+      },
+      "footer": {
+        "actions": {
+          "add": "Add",
+          "export": "Export"
+        }
+      }
     }
   }
 }

@@ -8,6 +8,7 @@
     <can-import from="account-health-tracker/components/header/header" />
     <can-import from="account-health-tracker/components/dashboard/" />
 
+    {{#if i18nInterpreter.isResolved}}
     <div class="container">
       <header>
         <aht-header class="row" />
@@ -16,6 +17,7 @@
         <aht-dashboard />
       </main>
     </div>
+    {{/if}}
 
     {{#switch env.NODE_ENV}}
       {{#case "production"}}
