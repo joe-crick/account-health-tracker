@@ -1,5 +1,5 @@
 <can-import from="account-health-tracker/components/general/inline-alert/" />
-<can-import from="bit-c3"/>
+<!--<can-import from="bit-c3"/>-->
 {{#if kpiPromise.isResolved}}
 <bit-c3>
     <bit-c3-data type="{{type}}">
