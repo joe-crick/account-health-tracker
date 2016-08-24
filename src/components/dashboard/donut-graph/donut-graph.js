@@ -4,6 +4,7 @@ import DefineList from 'can-define/list/';
 import c3 from 'c3';
 import './donut-graph.less!';
 import template from './donut-graph.stache!';
+import { translate } from 'account-health-tracker/translation';
 import { healthColors } from 'account-health-tracker/helpers';
 
 export const ViewModel = DefineMap.extend({
@@ -50,6 +51,11 @@ export default Component.extend({
             warning: healthColors.warning,
             danger: healthColors.danger
           },
+          names: {
+            healthy: translate('dashboard.chart.keys.healthy'),
+            warning: translate('dashboard.chart.keys.warning'),
+            danger: translate('dashboard.chart.keys.danger')
+          },
           type: 'donut'
         },
         legend: {
@@ -76,7 +82,7 @@ export default Component.extend({
       this.viewModel.chart.destroy();
     },
 
-    '{viewModel} dataColumns': function (viewModel, ev, dataColumns) {
+    '{viewModel} dataColumns': function reloadChart(viewModel, ev, dataColumns) {
       viewModel.chart.load({
         columns: dataColumns,
         unload: viewModel.chart.columns
