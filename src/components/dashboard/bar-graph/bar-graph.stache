@@ -3,7 +3,7 @@
     <div class="hidden-xs col-sm-12">
       {{#if kpiPromise.isResolved}}
         {{#if kpis}}
-            <div class="scroller left-scroll {{^is leftPosition 0}}disabled{{/is}}">
+            <div class="scroller left-scroll">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             </div>
             <div class="over-flow">

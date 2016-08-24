@@ -12,7 +12,7 @@ export default function generateGraph(element) {
       columns: [
         ['healthy', 30, 200, 200, 300, 150, 250],
         ['warning', 130, 100, 100, 200, 150, 50],
-        ['danger', 230, 200, 200, 0, 250, 250],
+        ['danger', 65, 70, 120, 0, 10, 15],
         ['kpis', 'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'sic']
       ],
       type: 'bar',
