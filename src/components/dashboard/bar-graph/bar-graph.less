@@ -8,6 +8,13 @@ aht-bar-graph {
     font-size: 3em;
     vertical-align: middle;
     height: 250px;
+    &:hover {
+      cursor: pointer;
+    }
+    &.disabled {
+      cursor: not-allowed;
+      color: lightgray;
+    }
   }
 
   .over-flow {
