@@ -10,7 +10,7 @@ export const ViewModel = DefineMap.extend({
       this.get('kpiPromise')
         .then(set)
         .then(() => {
-          if(last) {
+          if (last) {
             generateGraph();
           }
         });

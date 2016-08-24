@@ -34,7 +34,7 @@ export default function generateGraph(element) {
     bindto: element.querySelector('.dashboard-summary-bar-chart'),
     grid: {
       y: {
-        lines: [{value:0}]
+        lines: [{value: 0}]
       }
     },
     axis: {
