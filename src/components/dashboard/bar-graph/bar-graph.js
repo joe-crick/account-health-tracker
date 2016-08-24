@@ -44,9 +44,10 @@ export const ViewModel = DefineMap.extend({
  */
 function scrollBarContents(isAddition, chartLength) {
   const dashboardBarChart = this.viewModel.barGraphElement;
-  const leftPos = getLeftPos(dashboardBarChart);
+  let leftPos = getLeftPos(dashboardBarChart);
   if (leftPos <= 0 && Math.abs(leftPos) < chartLength) {
-    dashboardBarChart.style.left = isAddition ? `${(leftPos + 400)}px` : `${(leftPos - 400)}px`;
+    leftPos = isAddition ? leftPos + 400 : leftPos - 400;
+    dashboardBarChart.style.left = `${(leftPos)}px`;
     this.viewModel.set('leftPosition', leftPos);
   }
 }
