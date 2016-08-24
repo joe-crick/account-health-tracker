@@ -4,48 +4,61 @@ import template from './bar-graph.stache!';
 import c3 from 'c3';
 import './bar-graph.less!';
 
+function generateGraph(element) {
+  c3.generate({
+    data: {
+      x: 'kpis',
+      columns: [
+        ['healthy', 30, 200, 200, 400, 150, 250],
+        ['warning', 130, 100, 100, 200, 150, 50],
+        ['danger', 230, 200, 200, 0, 250, 250],
+        ['kpis', 'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'sic']
+      ],
+      type: 'bar',
+      groups: [
+        ['healthy', 'warning', 'danger']
+      ],
+      labels: {
+        format() {
+          return 'my-kpi'
+        }
+      }
+    },
+    bindto: element.querySelector('.dashboard-summary-bar-chart'),
+    grid: {
+      y: {
+        lines: [{value:0}]
+      }
+    },
+    axis: {
+      x: {
+        type: 'category',
+        tick: {
+          multiline: false
+        },
+        height: 130
+      }
+    }
+  });
+}
+
 export const ViewModel = DefineMap.extend({
   kpis: {
     get(last, set){
-      this.get('kpiPromise').then(set);
+      this.get('kpiPromise')
+        .then(set)
+        .then(() => {
+          if(last) {
+            generateGraph();
+          }
+        });
     }
   },
   kpiPromise: {
     get() {
       return new Promise((resolve, reject) => {
-        reject(new Error());
-      })
-    }
-  },
-  barChart: {
-    get() {
-      var kpis = this.get('kpis');
-
-      return kpis ? c3.generate({
-        data: {
-          bindto: '#bar-chart',
-          columns: [
-            ['data1', 30, 200, 200, 400, 150, -250],
-            ['data2', 130, -100, 100, 200, 150, 50],
-            ['data3', 230, -200, 200, 0, 250, 250]
-          ],
-          type: 'bar',
-          groups: [
-            ['data1', 'data2']
-          ]
-        },
-        axis: {
-          x: {
-            type: axis_x_type
-          },
-          rotated: axis_rotated
-        },
-        grid: {
-          y: {
-            lines: [{value:0}]
-          }
-        },
-      }) : {};
+        resolve({});
+      });
     }
   }
 });
@@ -54,4 +67,9 @@ export default Component.extend({
   tag: 'aht-bar-graph',
   ViewModel,
   template,
+  events: {
+    inserted(element) {
+      generateGraph(element);
+    }
+  }
 });

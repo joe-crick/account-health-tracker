@@ -11,7 +11,7 @@
   "scripts": {
     "test": "npm run lint && testee src/test.html --browsers chromium --reporter Spec",
     "start": "done-serve --port 8080",
-    "develop": "done-serve --develop --port 8080",
+    "develop": "done-serve --develop --port 8080 --static",
     "document": "documentjs",
     "build": "npm run clean && node bin/build",
     "clean": "rimraf build && rimraf dist",
@@ -33,8 +33,7 @@
     ],
     "npmAlgorithm": "flat",
     "map": {
-      "chai": "chai/chai",
-      "d3": "d3/d3"
+      "chai": "chai/chai"
     },
     "meta": {
       "bootstrap/js/collapse": {

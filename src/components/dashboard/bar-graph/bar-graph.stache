@@ -1,9 +1,11 @@
-<can-import from="account-health-tracker/components/general/inline-alert/" />
+<can-import from="account-health-tracker/components/general/inline-alert/"/>
 {{#if kpiPromise.isResolved}}
-    <div id="bar-chart"></div>
+  {{#if kpis}}
+    <div class="dashboard-summary-bar-chart"></div>
+  {{/if}}
 {{else}}
     <aht-inline-alert
             alert-title="{{i18n 'dashboard.barChart.getKpisErrorTitle'}}"
-            message="{{i18n 'dashboard.barChart.getKpisErrorMessage'}}" >
+            message="{{i18n 'dashboard.barChart.getKpisErrorMessage'}}">
     </aht-inline-alert>
 {{/if}}
