@@ -37,37 +37,67 @@ export const ViewModel = DefineMap.extend({
   }
 });
 
+/**
+ *
+ * @param isAddition
+ * @param chartLength
+ */
+function scrollBarContents(isAddition, chartLength) {
+  const dashboardBarChart = this.viewModel.barGraphElement;
+  const leftPos = getLeftPos(dashboardBarChart);
+  if (leftPos <= 0 && Math.abs(leftPos) < chartLength) {
+    dashboardBarChart.style.left = isAddition ? `${(leftPos + 400)}px` : `${(leftPos - 400)}px`;
+    this.viewModel.set('leftPosition', leftPos);
+  }
+}
+
+function chartRightScrollLimit() {
+  return this.chartLength - 200;
+}
+
 export default Component.extend({
   tag: 'aht-bar-graph',
   ViewModel,
   template,
   events: {
+    /**
+     * @description inserted
+     * @param element
+     */
     inserted(element) {
       const vm = this.viewModel;
       vm.chart = generateGraph(element);
       vm.barGraphElement = element.querySelector('.dashboard-summary-bar-chart');
       vm.chartLength = vm.barGraphElement.clientWidth;
+      vm.leftPosition = 0;
     },
+    /**
+     * @description left scroll click
+     */
     '.left-scroll click'() {
-      const dashboardBarChart = this.viewModel.barGraphElement;
-      const leftPos = getLeftPos(dashboardBarChart);
-      if (leftPos < 0 && Math.abs(leftPos) < this.viewModel.chartLength) {
-        dashboardBarChart.style.left = `${(leftPos + 400)}px`;
-        this.viewModel.set('leftPosition', leftPos);
-      }
+      scrollBarContents.call(this, true, this.viewModel.chartLength);
     },
+    /**
+     * @description right scroll click
+     */
     '.right-scroll click'() {
-      const dashboardBarChart = this.viewModel.barGraphElement;
-      const leftPos = getLeftPos(dashboardBarChart);
-      if (leftPos <= 0 && Math.abs(leftPos) < (this.viewModel.chartLength - 200)) {
-        dashboardBarChart.style.left = `${(leftPos - 400)}px`;
-        this.viewModel.set('leftPosition', leftPos);
-      }
+      scrollBarContents.call(this, false, chartRightScrollLimit.call(this.viewModel));
     }
   },
   helpers: {
-    isScrollerDisabled() {
-      return false;
+    /**
+     * @description is left scroll disabled
+     * @returns {string}
+     */
+    isLeftScrollDisabled() {
+      return this.leftPosition === 0 ? 'disabled' : '';
+    },
+    /**
+     * @description is right scroll disabled
+     * @returns {string}
+     */
+    isRightScrollDisabled() {
+      return this.leftPosition === chartRightScrollLimit.call(this) ? 'disabled' : '';
     }
   }
 });

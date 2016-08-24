@@ -3,13 +3,13 @@
     <div class="hidden-xs col-sm-12">
       {{#if kpiPromise.isResolved}}
         {{#if kpis}}
-            <div class="scroller left-scroll">
+            <div class="scroller left-scroll {{isLeftScrollDisabled}}">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             </div>
             <div class="over-flow">
                 <div class="dashboard-summary-bar-chart"></div>
             </div>
-            <div class="scroller right-scroll"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+            <div class="scroller right-scroll {{isRightScrollDisabled}}"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
         {{/if}}
       {{else}}
           <aht-inline-alert
