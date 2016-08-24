@@ -1,0 +1,60 @@
+#%RAML 0.8
+title: AHM
+baseUri: 'http://localhost:3000'
+protocols: []
+documentation:
+  - title: AHM
+    content: ''
+/clients:
+  displayName: clients
+  description: ''
+  '/{clientId}':
+    displayName: '{clientId}'
+    description: ''
+    /projects:
+      displayName: projects
+      description: ''
+      uriParameters: {}
+      get:
+        displayName: projects
+        headers: {}
+        responses: {}
+        queryParameters: {}
+      '/{projectId}':
+        displayName: '{projectId}'
+        description: ''
+        /kpis:
+          displayName: kpis
+          description: ''
+          uriParameters: {}
+          get:
+            displayName: kpis
+            headers: {}
+            responses: {}
+            queryParameters: {}
+        /entries:
+          displayName: entries
+          description: ''
+          uriParameters: {}
+          get:
+            displayName: entries
+            headers: {}
+            responses: {}
+            queryParameters: {}
+  uriParameters: {}
+  get:
+    displayName: clients
+    headers: {}
+    responses: {}
+    queryParameters: {}
+/:
+  displayName: ''
+  description: ''
+  uriParameters: {}
+  get:
+    displayName: company
+    headers: {}
+    responses: {}
+    queryParameters: {}
+schemas: []
+traits: []
