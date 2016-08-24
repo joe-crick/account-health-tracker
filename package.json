@@ -36,6 +36,9 @@
       "chai": "chai/chai"
     },
     "meta": {
+      "c3": {
+        "format": "cjs"
+      },
       "bootstrap/js/collapse": {
         "deps": [
           "jquery"
@@ -49,7 +52,6 @@
     }
   },
   "dependencies": {
-    "bit-c3": "git+https://github.com/bitovi-components/bit-c3.git#ad8d49b8093774cce5c3cdd360502a102feaec6a",
     "bootstrap": "^3.3.7",
     "c3": "^0.4.11",
     "can-component": "^3.0.0-pre.15",
