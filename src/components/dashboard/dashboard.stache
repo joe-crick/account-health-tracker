@@ -10,7 +10,10 @@
     <p>Overall Health</p>
   </div>
   <div class="col-sm-4">
-    <aht-donut-graph />
+    <aht-donut-graph show-label 
+      {healthy-data}="healthyData" 
+      {warning-data}="warningData" 
+      {danger-data}="dangerData" />
   </div>
 </div>
 <div class="row">

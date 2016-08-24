@@ -11,6 +11,9 @@ export const ViewModel = DefineMap.extend({
     value: 'This is the aht-donut-graph component',
   },
   chart: '*',
+  showLabel: {
+    type: 'htmlbool'
+  },
   healthyData: {
     value: []
   },
@@ -53,7 +56,7 @@ export default Component.extend({
           type: 'donut'
         },
         legend: {
-          show: true,
+          show: this.viewModel.showLabel,
           position: 'right',
           item: {
             onclick() {
@@ -76,7 +79,7 @@ export default Component.extend({
       this.viewModel.chart.destroy();
     },
 
-    '{viewModel} dataColumns': function (viewModel, ev, dataColumns) {
+    '{viewModel} dataColumns': function reloadChart(viewModel, ev, dataColumns) {
       viewModel.chart.load({
         columns: dataColumns,
         unload: viewModel.chart.columns
