@@ -14,8 +14,10 @@ Company.List = DefineList.extend({
   '*': Company
 });
 
+// can-connect data/url does not support urls without an id
+// so we can't do /company for all company requests'
 export const companyConnection = superMap({
-  url: '/',
+  url: '/company',
   idProp: 'id',
   Map: Company,
   List: Company.List,

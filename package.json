@@ -11,7 +11,7 @@
   "scripts": {
     "test": "npm run lint && testee src/test.html --browsers chromium --reporter Spec",
     "start": "done-serve --port 8080",
-    "develop": "done-serve --develop --port 8080",
+    "develop": "done-serve --develop --port 8080 --static",
     "document": "documentjs",
     "build": "npm run clean && node bin/build",
     "clean": "rimraf build && rimraf dist",
@@ -49,6 +49,7 @@
     }
   },
   "dependencies": {
+    "bit-c3": "git+https://github.com/bitovi-components/bit-c3.git#ad8d49b8093774cce5c3cdd360502a102feaec6a",
     "bootstrap": "^3.3.7",
     "c3": "^0.4.11",
     "can-component": "^3.0.0-pre.15",

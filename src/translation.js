@@ -1,5 +1,5 @@
 import i18next from 'i18next';
-import {registeri18nHelper} from 'account-health-tracker/helpers';
+import { registeri18nHelper } from 'account-health-tracker/helpers';
 
 import enUs from 'account-health-tracker/i18n/en-US.json';
 
