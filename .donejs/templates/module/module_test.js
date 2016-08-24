@@ -5,7 +5,7 @@ import module from './<%= name %>';
 const assert = chai.assert;
 
 describe('<%= module %>', function <%= module %>VMTests() {
-  it('Initialized the module', function() {
+  it('Initialized the module', function test() {
     assert.equal(typeof module, 'function');
     assert.equal(module(), 'This is the <%= name %> module');
   });
