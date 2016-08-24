@@ -1,12 +1,12 @@
 import 'steal-mocha';
 import chai from 'chai';
-import <%= className %> from './<%= name %>';
+import Kpi from './kpi';
 
 const assert = chai.assert;
 
-describe('models/<%= name %>', function <%= className %>Tests() {
+describe('models/kpi', function KpiTests() {
   it('getList', function test(done) {
-    <%= className %>.getList().then(function get<%= className %>s(items) {
+    Kpi.getList().then(function getKPIs(items) {
       assert.equal(items.length, 2);
       assert.equal(items.item(0).description, 'First item');
       done();
