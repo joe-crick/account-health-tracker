@@ -46,7 +46,9 @@ export default function generateGraph(element) {
         height: 130
       },
       y: {
-        show: false
+        show: false,
+        min: 0,
+        padding: 0
       }
     }
   });
