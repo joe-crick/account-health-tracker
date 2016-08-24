@@ -5,5 +5,5 @@ import 'steal-mocha';
 // let assert = chai.assert;
 
 // ViewModel unit tests
-describe('account-health-tracker/header', function () {
+describe('account-health-tracker/header', function headerVMtests() {
 });

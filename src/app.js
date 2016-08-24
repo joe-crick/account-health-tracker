@@ -13,7 +13,6 @@ const AppViewModel = DefineMap.extend({
   page: 'string',
   title: {
     value: 'account-health-tracker',
-<<<<<<< a01e1aa9f90915864f7d6b61009748322d9e7b19
     serialize: false,
   },
   locale: {
@@ -24,9 +23,6 @@ const AppViewModel = DefineMap.extend({
     get() {
       return translation(this.locale);
     }
-=======
-    serialize: false
->>>>>>> Add models
   }
 });
 

@@ -1,5 +1,4 @@
 import fixture from 'can-fixture';
-import kpiData from './kpi.json';
 import entryData from './entry.json';
 
 const store = fixture.store(entryData);
