@@ -35,6 +35,7 @@
     "import/no-extraneous-dependencies": ["off"],
     "import/no-named-as-default": 0,
     "import/imports-first": 0,
-    "comma-dangle": 0
+    "comma-dangle": 0,
+    "object-curly-spacing": 0
 	}
 }
