@@ -69,6 +69,7 @@
     "generator-donejs": "^0.10.0-pre.0",
     "i18next": "^3.4.1",
     "jquery": "~2.2.1",
+    "moment": "^2.14.1",
     "steal": "^0.16.35",
     "steal-stache": "^3.0.0-pre.3"
   },
