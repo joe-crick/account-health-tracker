@@ -7,7 +7,6 @@ const GRAPH_HEIGHT = 300;
 const GRAPH_TYPE = 'bar';
 const AXIS_TYPE = 'category';
 const AXIS_HEIGHT = 130;
-const MIN_Y_AXIS = 0;
 
 /**
  * @description generates the bar graph
@@ -19,10 +18,10 @@ export default function generateGraph(element) {
       x: kpis,
       order: null,
       columns: [
-        [health.healthy, 30, 200, 200, 300, 150, 250, 30, 200, 200, 300, 150, 250],
-        [health.warning, 130, 100, 100, 200, 150, 50, 30, 100, 100, 200, 150, 50],
-        [health.danger, 65, 70, 120, 0, 10, 15, 65, 70, 120, 0, 10, 15],
-        [kpis, 'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'sic', 'lorems', 'ipsums', 'dolors', 'sits', 'begs', 'plays dead']
+        [health.healthy, 30, 200, 200, 300, 150, 250, 30],
+        [health.warning, 130, 100, 100, 200, 150, 50, 30],
+        [health.danger, 65, 70, 120, 0, 10, 15, 65],
+        [kpis, 'lorem', 'ipsum', 'dolor', 'amet', 'sits', 'begs', 'plays dead']
       ],
       type: GRAPH_TYPE,
       groups: [
@@ -56,7 +55,8 @@ export default function generateGraph(element) {
       },
       y: {
         show: false,
-        min: MIN_Y_AXIS
+        min: 0,
+        padding: 0
       }
     }
   });

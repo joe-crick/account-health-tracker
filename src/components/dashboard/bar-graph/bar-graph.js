@@ -2,12 +2,12 @@ import Component from 'can-component/';
 import DefineMap from 'can-define/map/';
 import template from './bar-graph.stache!';
 import generateGraph from './graphGenerator';
-import { scrollBarContents, chartRightScrollLimit } from './barGraphUtils';
+import {scrollBarContents, chartRightScrollLimit} from './barGraphUtils';
 import './bar-graph.less!';
 
 export const ViewModel = DefineMap.extend({
   kpis: {
-    get(last, set){
+    get(last, set) {
       this.get('kpiPromise')
         .then(set)
         .then(() => {
@@ -19,7 +19,7 @@ export const ViewModel = DefineMap.extend({
   },
   kpiPromise: {
     get() {
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve) => {
         resolve({});
       });
     }
