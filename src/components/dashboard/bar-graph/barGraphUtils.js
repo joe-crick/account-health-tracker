@@ -23,7 +23,7 @@ function canScroll(leftPos, chartWidth, isAddition) {
  * @param chartWidth
  */
 function scrollBarContents(isAddition, chartWidth) {
-  const dashboardBarChart = this.viewModel.barGraphElement;
+  const dashboardBarChart = this.viewModel.barGraphContainer;
   const leftPos = getLeftPos(dashboardBarChart);
   if (canScroll(leftPos, chartWidth, isAddition)) {
     const newPos = isAddition ? leftPos + 400 : leftPos - 400;

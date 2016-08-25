@@ -1,41 +1,9 @@
-
 /* eslint no-trailing-spaces: 0 */
 
 import c3 from 'c3';
 import {healthColors} from 'account-health-tracker/enums/colors/';
 import health from 'account-health-tracker/enums/healthGroups/';
-
-const X_AXIS_LABEL = 'kpis';
-const GRAPH_HEIGHT = 300;
-const GRAPH_TYPE = 'bar';
-const AXIS_TYPE = 'category';
-const AXIS_HEIGHT = 130;
-
-/**
- * @description get kpi columsn
- * @param kpis
- * @returns {*[]}
- */
-function getKpiColumns(kpis) {
-  const healthyData = [health.healthy];
-  const warningData = [health.warning];
-  const dangerData = [health.danger];
-  const labelData = [X_AXIS_LABEL];
-
-  kpis.forEach((kpi) => {
-    healthyData.push(kpi[health.healthy]);
-    warningData.push(kpi[health.warning]);
-    dangerData.push(kpi[health.danger]);
-    labelData.push(kpi.name);
-  });
-
-  return [
-    healthyData,
-    warningData,
-    dangerData,
-    labelData
-  ];
-}
+import graphConfig from './graphConfig';
 
 /**
  * @description generates the bar graph
@@ -45,10 +13,10 @@ function getKpiColumns(kpis) {
 export default function generateGraph(element, kpis) {
   return c3.generate({
     data: {
-      x: X_AXIS_LABEL,
+      x: graphConfig.xAxis.label,
       order: null,
-      columns: getKpiColumns(kpis),
-      type: GRAPH_TYPE,
+      columns: kpis,
+      type: graphConfig.graphType,
       groups: [
         [health.healthy, health.warning, health.danger]
       ],
@@ -62,9 +30,9 @@ export default function generateGraph(element, kpis) {
       show: false
     },
     size: {
-      height: GRAPH_HEIGHT
+      height: graphConfig.graphHeight
     },
-    bindto: element.querySelector('.dashboard-summary-bar-chart'),
+    bindto: element,
     grid: {
       y: {
         lines: [{value: 0}]
@@ -72,11 +40,11 @@ export default function generateGraph(element, kpis) {
     },
     axis: {
       x: {
-        type: AXIS_TYPE,
+        type: graphConfig.xAxis.type,
         tick: {
           multiline: false
         },
-        height: AXIS_HEIGHT
+        height: graphConfig.xAxis.height
       },
       y: {
         show: false,
