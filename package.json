@@ -10,8 +10,8 @@
   },
   "scripts": {
     "test": "npm run lint && testee src/test.html --browsers chromium --reporter Spec",
-    "start": "done-serve --port 8080",
-    "develop": "done-serve --develop --port 8080 --static",
+    "start": "NODE_ENV=production node bin/server",
+    "develop": "node bin/server",
     "document": "documentjs",
     "build": "npm run clean && node bin/build",
     "clean": "rimraf build && rimraf dist",
@@ -73,7 +73,12 @@
     "i18next": "^3.4.1",
     "jquery": "~2.2.1",
     "moment": "^2.14.1",
+    "express": "^4.14.0",
+    "infanticide": "^1.0.1",
+    "express-history-api-fallback": "^2.0.0",
     "steal": "^0.16.35",
+    "compression": "^1.6.2",
+    "nconf": "^0.8.4",
     "steal-stache": "^3.0.0-pre.3"
   },
   "devDependencies": {
