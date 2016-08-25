@@ -18,7 +18,16 @@
         }
       },
       "clients": {
-
+        "header": {
+          "title": "Client Health"
+        },
+        "table": {
+          "header": {
+            "client": "Client",
+            "trend": "Trend",
+            "health": "Health"
+          }
+        }
       },
       "company": {
 
