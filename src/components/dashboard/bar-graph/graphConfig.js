@@ -6,4 +6,4 @@ export default {
   },
   graphHeight: 300,
   graphType: 'bar'
-}
+};

@@ -40,4 +40,18 @@ function chartRightScrollLimit() {
   return this.chartWidth - this.overflowContainerWidth;
 }
 
-export {scrollBarContents, chartRightScrollLimit};
+/**
+ * @description Scroll bar contents left
+ */
+function scrollBarContentsLeft() {
+  scrollBarContents.call(this, true, this.viewModel.chartWidth);
+}
+
+/**
+ * @description Scroll bar contents right
+ */
+function scrollBarContentsRight() {
+  scrollBarContents.call(this, false, chartRightScrollLimit.call(this.viewModel));
+}
+
+export {scrollBarContentsLeft, scrollBarContentsRight, chartRightScrollLimit};

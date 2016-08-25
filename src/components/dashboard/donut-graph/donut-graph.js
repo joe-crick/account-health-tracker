@@ -47,7 +47,7 @@ export default Component.extend({
   events: {
     inserted() {
       this.viewModel.chart = c3.generate({
-        bindto: this.element.querySelector('.chart'),
+        bindto: this.element.querySelector('.donut-chart'),
         data: {
           columns: this.viewModel.dataColumns,
           colors: {

@@ -2,7 +2,7 @@ import Component from 'can-component/';
 import DefineMap from 'can-define/map/';
 import template from './bar-graph.stache!';
 import generateGraph from './graphGenerator';
-import {scrollBarContents, chartRightScrollLimit} from './barGraphUtils';
+import {scrollBarContentsLeft, scrollBarContentsRight, chartRightScrollLimit} from './barGraphUtils';
 import CompanyKpis from 'account-health-tracker/models/companyKpis';
 import health from 'account-health-tracker/enums/healthGroups/';
 import TEMP_DATA from './tempData';
@@ -10,7 +10,7 @@ import graphConfig from './graphConfig';
 import './bar-graph.less!';
 
 export const ViewModel = DefineMap.extend({
-  kpis: '*',
+  kpis: [CompanyKpis],
   kpiPromise: {
     get() {
       const context = this;
@@ -83,13 +83,13 @@ export default Component.extend({
      * @description left scroll click
      */
     '.left-scroll click'() {
-      scrollBarContents.call(this, true, this.viewModel.chartWidth);
+      scrollBarContentsLeft.call(this);
     },
     /**
      * @description right scroll click
      */
     '.right-scroll click'() {
-      scrollBarContents.call(this, false, chartRightScrollLimit.call(this.viewModel));
+      scrollBarContentsRight.call(this);
     },
     /**
      * @description on data column update
