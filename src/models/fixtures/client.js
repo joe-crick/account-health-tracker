@@ -19,14 +19,14 @@ function filterEntries(clientId) {
 }
 
 fixture({
-  'GET /clients': function getEntries(request, response) {
+  'GET /clients': function getClients(request, response) {
     clientData.map((client) => {
       const entries = filterEntries(client.id);
       return Object.assign(client, entries);
     });
     response(clientData);
   },
-  'GET /clients/{id}': function getEntries(request, response) {
+  'GET /clients/{id}': function getClient(request, response) {
     const clientId = +request.data.id;
     const client = clientData.filter((c) => {
       return c.id === clientId;

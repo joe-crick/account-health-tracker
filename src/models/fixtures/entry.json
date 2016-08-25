@@ -3,24 +3,27 @@
     "id": 1,
     "projectId": 1,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "danger"
   },
   {
     "id": 2,
     "projectId": 1,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "danger"
   },
   {
     "id": 3,
     "projectId": 1,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-08-23T16:41:47.918Z",
@@ -30,24 +33,27 @@
     "id": 4,
     "projectId": 1,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "healthy"
   },
   {
     "id": 5,
     "projectId": 1,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "danger"
   },
   {
     "id": 6,
     "projectId": 1,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-08-23T16:41:47.918Z",
@@ -57,15 +63,17 @@
     "id": 7,
     "projectId": 2,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "healthy"
   },
   {
     "id": 8,
     "projectId": 2,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-07-23T16:41:47.918Z",
@@ -75,60 +83,67 @@
     "id": 9,
     "projectId": 2,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-08-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "danger"
   },
   {
     "id": 10,
     "projectId": 2,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "danger"
   },
   {
     "id": 11,
     "projectId": 2,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "healthy"
   },
   {
     "id": 12,
     "projectId": 2,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-08-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "healthy"
   },
   {
     "id": 13,
     "projectId": 3,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "healthy"
   },
   {
     "id": 14,
     "projectId": 3,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "danger"
   },
   {
     "id": 15,
     "projectId": 3,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-08-23T16:41:47.918Z",
@@ -138,87 +153,97 @@
     "id": 16,
     "projectId": 3,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "warning"
   },
   {
     "id": 17,
     "projectId": 3,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "danger"
   },
   {
     "id": 18,
     "projectId": 3,
     "clientId": 1,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-08-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "warning"
   },
   {
     "id": 19,
     "projectId": 4,
     "clientId": 2,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "healthy"
   },
   {
     "id": 20,
     "projectId": 4,
     "clientId": 2,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "danger"
   },
   {
     "id": 21,
     "projectId": 4,
     "clientId": 2,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-08-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "danger"
   },
   {
     "id": 22,
     "projectId": 4,
     "clientId": 2,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "healthy"
   },
   {
     "id": 23,
     "projectId": 4,
     "clientId": 2,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "danger"
   },
   {
     "id": 24,
     "projectId": 4,
     "clientId": 2,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-08-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "warning"
   },
   {
     "id": 25,
     "projectId": 5,
     "clientId": 3,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-06-23T16:41:47.918Z",
@@ -228,6 +253,7 @@
     "id": 26,
     "projectId": 5,
     "clientId": 3,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-07-23T16:41:47.918Z",
@@ -237,6 +263,7 @@
     "id": 27,
     "projectId": 5,
     "clientId": 3,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-08-23T16:41:47.918Z",
@@ -246,51 +273,57 @@
     "id": 28,
     "projectId": 5,
     "clientId": 3,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "warning"
   },
   {
     "id": 29,
     "projectId": 5,
     "clientId": 3,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "healthy"
   },
   {
     "id": 30,
     "projectId": 5,
     "clientId": 3,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-08-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "warning"
   },
   {
     "id": 31,
     "projectId": 6,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "danger"
   },
   {
     "id": 32,
     "projectId": 6,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "danger"
   },
   {
     "id": 33,
     "projectId": 6,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-08-23T16:41:47.918Z",
@@ -300,15 +333,17 @@
     "id": 34,
     "projectId": 6,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "warning"
   },
   {
     "id": 35,
     "projectId": 6,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-07-23T16:41:47.918Z",
@@ -318,24 +353,27 @@
     "id": 36,
     "projectId": 6,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-08-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "healthy"
   },
   {
     "id": 37,
     "projectId": 7,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "healthy"
   },
   {
     "id": 38,
     "projectId": 7,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-07-23T16:41:47.918Z",
@@ -345,6 +383,7 @@
     "id": 39,
     "projectId": 7,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-08-23T16:41:47.918Z",
@@ -354,81 +393,90 @@
     "id": 40,
     "projectId": 7,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "healthy"
   },
   {
     "id": 41,
     "projectId": 7,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "danger"
   },
   {
     "id": 42,
     "projectId": 7,
     "clientId": 4,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-08-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "warning"
   },
   {
     "id": 43,
     "projectId": 8,
     "clientId": 5,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "warning"
+    "value": "healthy"
   },
   {
     "id": 44,
     "projectId": 8,
     "clientId": 5,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "danger"
   },
   {
     "id": 45,
     "projectId": 8,
     "clientId": 5,
+    "companyId": 1,
     "kpiId": 1,
     "name": "Quarterly Check in",
     "timestamp": "2016-08-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "warning"
   },
   {
     "id": 46,
     "projectId": 8,
     "clientId": 5,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-06-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "warning"
   },
   {
     "id": 47,
     "projectId": 8,
     "clientId": 5,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-07-23T16:41:47.918Z",
-    "value": "danger"
+    "value": "warning"
   },
   {
     "id": 48,
     "projectId": 8,
     "clientId": 5,
+    "companyId": 1,
     "kpiId": 2,
     "name": "Checklist Updated",
     "timestamp": "2016-08-23T16:41:47.918Z",
-    "value": "healthy"
+    "value": "danger"
   }
 ]
