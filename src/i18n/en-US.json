@@ -23,6 +23,23 @@
         }
       },
       "clients": {
+<<<<<<< HEAD
+=======
+        "header": {
+          "title": "Client Health",
+          "search": "Search..."
+        },
+        "table": {
+          "header": {
+            "client": "Client",
+            "trend": "Trend",
+            "health": "Health"
+          },
+          "results": {
+            "none": "No clients found"
+          }
+        }
+>>>>>>> origin
       },
       "company": {
       },

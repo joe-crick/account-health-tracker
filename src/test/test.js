@@ -12,3 +12,5 @@ import 'account-health-tracker/components/dashboard/donut-graph/donut-graph_test
 import 'account-health-tracker/components/dashboard/bar-graph/bar-graph_test';
 
 import 'account-health-tracker/components/general/inline-alert/inline-alert_test';
+
+import 'account-health-tracker/components/dashboard/client-health/client-health_test';
