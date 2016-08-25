@@ -19,7 +19,8 @@
       },
       "clients": {
         "header": {
-          "title": "Client Health"
+          "title": "Client Health",
+          "search": "Search..."
         },
         "table": {
           "header": {

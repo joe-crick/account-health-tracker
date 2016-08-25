@@ -4,9 +4,9 @@
   <div class="title col-sm-8">{{i18n 'dashboard.clients.header.title'}}</div>
   <form class="form-inline col-sm-4">
     <div class="form-group">
-      <label class="sr-only" for="search">Amount (in dollars)</label>
+      <label class="sr-only" for="search">{{i18n 'dashboard.clients.header.title'}}</label>
       <div class="input-group">
-        <input type="search" class="form-control" id="search" placeholder="Search...">
+        <input type="search" class="form-control" id="search" placeholder="{{i18n 'dashboard.clients.header.search'}}">
         <div class="input-group-addon">
           <div class="glyphicon glyphicon-search"></div>
         </div>
