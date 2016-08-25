@@ -3,6 +3,7 @@ import DefineList from 'can-define/list/';
 import superMap from './connection/superMap';
 import tag from 'can-connect/can/tag/';
 import enumType from './types/enum';
+import dateType from './types/date';
 
 export const Entry = DefineMap.extend({
   seal: false
@@ -11,7 +12,7 @@ export const Entry = DefineMap.extend({
   projectId: 'number',
   kpiId: 'number',
   name: 'string',
-  timestamp: 'date',
+  timestamp: dateType,
   value: enumType(['danger', 'warning', 'healthy'])
 });
 

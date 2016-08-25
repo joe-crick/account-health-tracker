@@ -10,6 +10,13 @@
       }
     },
     "dashboard": {
+      "chart": {
+        "keys": {
+          "healthy": "Healthy",
+          "warning": "Warning",
+          "danger": "Danger"
+        }
+      },
       "clients": {
 
       },
