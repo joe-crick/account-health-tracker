@@ -1,3 +1,8 @@
+/**
+ * @module {can.Map} account-health-tracker/models/entry Entry
+ *
+ * @group account-health-tracker/models/entry.properties 5 properties
+ */
 import DefineMap from 'can-define/map/';
 import DefineList from 'can-define/list/';
 import superMap from './connection/superMap';
@@ -8,11 +13,35 @@ import dateType from './types/date';
 export const Entry = DefineMap.extend({
   seal: false
 }, {
+  /**
+   * @property {Number}
+   * The id.
+   */
   id: 'number',
+  /**
+   * @property {Number}
+   * The projectId.
+   */
   projectId: 'number',
+  /**
+   * @property {Number}
+   * The kpiId.
+   */
   kpiId: 'number',
+  /**
+   * @property {String}
+   * The name.
+   */
   name: 'string',
+  /**
+   * @property {Date}
+   * The timestamp.
+   */
   timestamp: dateType,
+  /**
+   * @property {Enum}
+   * The entry rating.
+   */
   value: enumType(['danger', 'warning', 'healthy'])
 });
 
