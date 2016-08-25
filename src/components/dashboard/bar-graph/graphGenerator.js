@@ -1,8 +1,7 @@
 /* eslint no-trailing-spaces: 0 */
 
 import c3 from 'c3';
-import {healthColors} from 'account-health-tracker/enums/colors';
-import health from 'account-health-tracker/enums/healthGroups';
+import { healthColors, healthGroups } from 'account-health-tracker/enums';
 import graphConfig from './graphConfig';
 
 /**
@@ -18,7 +17,7 @@ export default function generateGraph(element, kpis) {
       columns: kpis,
       type: graphConfig.graphType,
       groups: [
-        [health.healthy, health.warning, health.danger]
+        [healthGroups.healthy, healthGroups.warning, healthGroups.danger]
       ],
       colors: {
         healthy: healthColors.healthy,

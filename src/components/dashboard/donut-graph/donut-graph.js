@@ -3,9 +3,8 @@ import DefineMap from 'can-define/map/';
 import DefineList from 'can-define/list/';
 import c3 from 'c3';
 import template from './donut-graph.stache!';
-import {healthColors} from 'account-health-tracker/enums/colors';
-import health from 'account-health-tracker/enums/healthGroups';
-import { translate } from 'account-health-tracker/translation';
+import {healthColors, healthGroups} from 'account-health-tracker/enums';
+import { translate } from 'account-health-tracker/healthGroupstranslation';
 import './donut-graph.less!';
 
 export const ViewModel = DefineMap.extend({
@@ -32,9 +31,9 @@ export const ViewModel = DefineMap.extend({
       const dangerData = this.dangerData;
 
       return [
-        new DefineList([health.healthy]).concat(healthyData),
-        new DefineList([health.warning]).concat(warningData),
-        new DefineList([health.danger]).concat(dangerData)
+        new DefineList([healthGroups.healthy]).concat(healthyData),
+        new DefineList([healthGroups.warning]).concat(warningData),
+        new DefineList([healthGroups.danger]).concat(dangerData)
       ];
     }
   }
