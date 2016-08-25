@@ -21,7 +21,7 @@ export default Component.extend({
       viewModel.chartWidth = viewModel.barGraphContainer.clientWidth;
       viewModel.leftPosition = 0;
       // Generate a blank graph, which will be populated once the data loads
-      viewModel.chart = generateGraph(viewModel.barGraphContainer, viewModel.dataColumns);
+      viewModel.chart = generateGraph(viewModel.barGraphContainer, viewModel.kpis);
     },
     /**
      * @description destroy chart on remove
@@ -45,11 +45,11 @@ export default Component.extend({
      * @description on data column update
      * @param viewModel
      * @param ev
-     * @param dataColumns
+     * @param kpis
      */
-    '{viewModel} dataColumns': function (viewModel, ev, dataColumns) {
+    '{viewModel} kpis': function (viewModel, ev, kpis) {
       viewModel.chart.load({
-        columns: dataColumns,
+        columns: kpis,
         unload: viewModel.chart.columns
       });
     }
