@@ -1,18 +1,21 @@
 import DefineMap from 'can-define/map/';
-import CompanyKpis from 'account-health-tracker/models/companyKpis';
-import health from 'account-health-tracker/enums/healthGroups';
+import Kpis from 'account-health-tracker/models/kpi';
+import {healthGroups as health} from 'account-health-tracker/enums/';
 import TEMP_DATA from './tempData';
 import graphConfig from './graphConfig';
 
 export default DefineMap.extend({
-  kpis: [CompanyKpis],
+  kpis: [Kpis],
   kpiPromise: {
     get() {
-      const context = this;
-      return CompanyKpis.getList({})
-        .then((kpis) => {
-          context.kpis = kpis;
-        });
+      return new Promise((resolve) => {
+        resolve({});
+      });
+      // const context = this;
+      // return Kpis.getList({})
+      //   .then((kpis) => {
+      //     context.kpis = kpis;
+      //   });
     }
   },
   barGraphContainer: '*',

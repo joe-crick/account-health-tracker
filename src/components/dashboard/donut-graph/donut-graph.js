@@ -3,8 +3,8 @@ import DefineMap from 'can-define/map/';
 import DefineList from 'can-define/list/';
 import c3 from 'c3';
 import template from './donut-graph.stache!';
-import {healthColors, healthGroups} from 'account-health-tracker/enums';
-import { translate } from 'account-health-tracker/healthGroupstranslation';
+import {healthColors, healthGroups} from 'account-health-tracker/enums/';
+import { translate } from 'account-health-tracker/translation';
 import './donut-graph.less!';
 
 export const ViewModel = DefineMap.extend({

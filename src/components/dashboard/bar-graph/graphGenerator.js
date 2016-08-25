@@ -1,7 +1,7 @@
 /* eslint no-trailing-spaces: 0 */
 
 import c3 from 'c3';
-import { healthColors, healthGroups } from 'account-health-tracker/enums';
+import { healthColors, healthGroups } from 'account-health-tracker/enums/';
 import graphConfig from './graphConfig';
 
 /**
