@@ -1,4 +1,13 @@
 import c3 from 'c3';
+import {healthColors} from 'account-health-tracker/enums/colors/';
+import health from 'account-health-tracker/enums/healthGroups/';
+
+const kpis = 'kpis';
+const GRAPH_HEIGHT = 300;
+const GRAPH_TYPE = 'bar';
+const AXIS_TYPE = 'category';
+const AXIS_HEIGHT = 130;
+const MIN_Y_AXIS = 0;
 
 /**
  * @description generates the bar graph
@@ -7,29 +16,29 @@ import c3 from 'c3';
 export default function generateGraph(element) {
   return c3.generate({
     data: {
-      x: 'kpis',
+      x: kpis,
       order: null,
       columns: [
-        ['healthy', 30, 200, 200, 300, 150, 250],
-        ['warning', 130, 100, 100, 200, 150, 50],
-        ['danger', 65, 70, 120, 0, 10, 15],
-        ['kpis', 'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'sic']
+        [health.healthy, 30, 200, 200, 300, 150, 250, 30, 200, 200, 300, 150, 250],
+        [health.warning, 130, 100, 100, 200, 150, 50, 30, 100, 100, 200, 150, 50],
+        [health.danger, 65, 70, 120, 0, 10, 15, 65, 70, 120, 0, 10, 15],
+        [kpis, 'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'sic', 'lorems', 'ipsums', 'dolors', 'sits', 'begs', 'plays dead']
       ],
-      type: 'bar',
+      type: GRAPH_TYPE,
       groups: [
-        ['healthy', 'warning', 'danger']
+        [health.healthy, health.warning, health.danger]
       ],
       colors: {
-        healthy: '#4CAF50',
-        warning: '#E6EE9C',
-        danger: '#E57373'
+        healthy: healthColors.healthy,
+        warning: healthColors.warning,
+        danger: healthColors.danger
       }
     },
     legend: {
       show: false
     },
     size: {
-      height: 300
+      height: GRAPH_HEIGHT
     },
     bindto: element.querySelector('.dashboard-summary-bar-chart'),
     grid: {
@@ -39,16 +48,15 @@ export default function generateGraph(element) {
     },
     axis: {
       x: {
-        type: 'category',
+        type: AXIS_TYPE,
         tick: {
           multiline: false
         },
-        height: 130
+        height: AXIS_HEIGHT
       },
       y: {
         show: false,
-        min: 0,
-        padding: 0
+        min: MIN_Y_AXIS
       }
     }
   });

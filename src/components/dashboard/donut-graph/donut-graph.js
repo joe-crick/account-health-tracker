@@ -4,7 +4,8 @@ import DefineList from 'can-define/list/';
 import c3 from 'c3';
 import './donut-graph.less!';
 import template from './donut-graph.stache!';
-import { healthColors } from 'account-health-tracker/helpers';
+import {healthColors} from 'account-health-tracker/enums/colors/';
+import health from 'account-health-tracker/enums/healthGroups/';
 
 export const ViewModel = DefineMap.extend({
   message: {
@@ -27,9 +28,9 @@ export const ViewModel = DefineMap.extend({
       const dangerData = this.dangerData;
 
       return [
-        new DefineList(['healthy']).concat(healthyData),
-        new DefineList(['warning']).concat(warningData),
-        new DefineList(['danger']).concat(dangerData)
+        new DefineList([health.healthy]).concat(healthyData),
+        new DefineList([health.warning]).concat(warningData),
+        new DefineList([health.danger]).concat(dangerData)
       ];
     }
   }

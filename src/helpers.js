@@ -7,9 +7,3 @@ export function registeri18nHelper(translationFn) {
     return translationFn(key);
   });
 }
-
-export const healthColors = {
-  healthy: '#50AE55',
-  warning: '#E6EDA0',
-  danger: '#E37475'
-};
