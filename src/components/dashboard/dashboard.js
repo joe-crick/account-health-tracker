@@ -26,11 +26,19 @@ import './dashboard.less!';
 import template from './dashboard.stache!';
 
 export const ViewModel = DefineMap.extend({
-
+  healthyData: {
+    value: []
+  },
+  warningData: {
+    value: []
+  },
+  dangerData: {
+    value: []
+  }
 });
 
 export default Component.extend({
   tag: 'aht-dashboard',
   ViewModel,
-  template,
+  template
 });
