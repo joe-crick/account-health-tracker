@@ -50,7 +50,7 @@ Entry.List = DefineList.extend({
 });
 
 export const entryConnection = superMap({
-  url: '/clients/{clientId}/projects/{projectId}/entries',
+  url: '/entries',
   idProp: 'id',
   Map: Entry,
   List: Entry.List,

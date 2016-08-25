@@ -18,18 +18,9 @@ export const KPI = DefineMap.extend({
   id: 'number',
   /**
    * @property {Number}
-   * The clientId.
+   * The companyId.
    */
-  clientId: 'number',
-  /**
-   * @property {Number}
-   * The projectId.
-   */
-  projectId: 'number',
-  /**
-   * @property {String}
-   * The name.
-   */
+  companyId: 'number',
   name: 'string'
 });
 
@@ -38,7 +29,7 @@ KPI.List = DefineList.extend({
 });
 
 export const kpiConnection = superMap({
-  url: '/clients/{clientId}/projects/{projectId}/kpis',
+  url: '/kpis',
   idProp: 'id',
   Map: KPI,
   List: KPI.List,
