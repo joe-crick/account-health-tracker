@@ -29,12 +29,30 @@ import './donut-graph.less!';
 import template from './donut-graph.stache!';
 
 export const ViewModel = DefineMap.extend({
+  /**
+   * @property {String} account-health-tracker/components/dashboard/donut-graph.type type
+   * @parent account-health-tracker/components/dashboard/donut-graph.properties
+   *
+   * Determines the type of graph to display.
+   **/
   type: {
     value: 'donut'
   },
+  /**
+   * @property {String} account-health-tracker/components/dashboard/donut-graph.title title
+   * @parent account-health-tracker/components/dashboard/donut-graph.properties
+   *
+   * The title of the graph.
+   **/
   title: {
     value: 'Foobar'
   },
+  /**
+   * @property {String} account-health-tracker/components/dashboard/donut-graph.dataColumns dataColumns
+   * @parent account-health-tracker/components/dashboard/donut-graph.properties
+   *
+   * The data columns for the overall health summary.
+   **/
   dataColumns: {
     value: new DefineList([
       new DefineList(['data1', 80]),

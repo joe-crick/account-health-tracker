@@ -1,6 +1,6 @@
 /**
  * @module {Module} account-health-tracker/components/dashboard <aht-dashboard>
- * @group account-health-tracker/components/tournament/details.properties 0 properties
+ * @group account-health-tracker/components/dashboard.properties 0 properties
  *
  * @description Provides an overview of the kpis for the company.
  *
