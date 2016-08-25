@@ -23,8 +23,6 @@
         }
       },
       "clients": {
-<<<<<<< HEAD
-=======
         "header": {
           "title": "Client Health",
           "search": "Search..."
@@ -39,7 +37,6 @@
             "none": "No clients found"
           }
         }
->>>>>>> origin
       },
       "company": {
       },
