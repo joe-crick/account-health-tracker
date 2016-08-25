@@ -1,3 +1,8 @@
+/**
+ * @module {can.Map} account-health-tracker/models/project Project
+ *
+ * @group account-health-tracker/models/project.properties 3 properties
+ */
 import DefineMap from 'can-define/map/';
 import DefineList from 'can-define/list/';
 import superMap from './connection/superMap';
@@ -6,8 +11,20 @@ import tag from 'can-connect/can/tag/';
 export const Project = DefineMap.extend({
   seal: false
 }, {
+  /**
+   * @property {Number}
+   * The id.
+   */
   id: 'number',
+  /**
+   * @property {Number}
+   * The clientId.
+   */
   clientId: 'number',
+  /**
+   * @property {String}
+   * The name.
+   */
   name: 'string'
 });
 
