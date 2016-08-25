@@ -11,7 +11,7 @@
             <div class="scroller left-scroll {{isLeftScrollDisabled}}">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             </div>
-            <div class="over-flow">
+            <div class="bar-chart-over-flow">
                 <div class="dashboard-summary-bar-chart"></div>
             </div>
             <div class="scroller right-scroll {{isRightScrollDisabled}}"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>

@@ -29,7 +29,10 @@ export const ViewModel = DefineMap.extend({
   leftPosition: {
     value: 0
   },
-  chartLength: {
+  chartWidth: {
+    value: 0
+  },
+  overflowContainerWidth: {
     value: 0
   }
 });
@@ -47,14 +50,15 @@ export default Component.extend({
       const vm = this.viewModel;
       vm.chart = generateGraph(element);
       vm.barGraphElement = element.querySelector('.dashboard-summary-bar-chart');
-      vm.chartLength = vm.barGraphElement.clientWidth;
+      vm.chartWidth = vm.barGraphElement.clientWidth;
       vm.leftPosition = 0;
+      vm.overflowContainerWidth = element.querySelector('.bar-chart-over-flow').clientWidth;
     },
     /**
      * @description left scroll click
      */
     '.left-scroll click'() {
-      scrollBarContents.call(this, true, this.viewModel.chartLength);
+      scrollBarContents.call(this, true, this.viewModel.chartWidth);
     },
     /**
      * @description right scroll click
@@ -76,7 +80,8 @@ export default Component.extend({
      * @returns {string}
      */
     isRightScrollDisabled() {
-      return this.leftPosition === chartRightScrollLimit.call(this) ? 'disabled' : '';
+      const rightScrollLimit = chartRightScrollLimit.call(this);
+      return Math.abs(this.leftPosition) < rightScrollLimit ? '' : 'disabled';
     }
   }
 });
