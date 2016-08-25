@@ -4,7 +4,7 @@ import template from './bar-graph.stache!';
 import generateGraph from './graphGenerator';
 import {scrollBarContentsLeft, scrollBarContentsRight, chartRightScrollLimit} from './barGraphUtils';
 import CompanyKpis from 'account-health-tracker/models/companyKpis';
-import health from 'account-health-tracker/enums/healthGroups/';
+import health from 'account-health-tracker/enums/healthGroups';
 import TEMP_DATA from './tempData';
 import graphConfig from './graphConfig';
 import './bar-graph.less!';

@@ -18,7 +18,11 @@ export const companyKpisConnection = superMap({
   idProp: 'id',
   Map: CompanyKpis,
   List: CompanyKpis.List,
-  name: 'companyKpis'
+  name: 'companyKpis',
+  parseListData(data) {
+    debugger
+    return data;
+  }
 });
 
 tag('company-kpis-model', companyKpisConnection);

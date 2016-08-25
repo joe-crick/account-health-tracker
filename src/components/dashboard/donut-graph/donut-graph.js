@@ -3,8 +3,8 @@ import DefineMap from 'can-define/map/';
 import DefineList from 'can-define/list/';
 import c3 from 'c3';
 import template from './donut-graph.stache!';
-import {healthColors} from 'account-health-tracker/enums/colors/';
-import health from 'account-health-tracker/enums/healthGroups/';
+import {healthColors} from 'account-health-tracker/enums/colors';
+import health from 'account-health-tracker/enums/healthGroups';
 import { translate } from 'account-health-tracker/translation';
 import './donut-graph.less!';
 
