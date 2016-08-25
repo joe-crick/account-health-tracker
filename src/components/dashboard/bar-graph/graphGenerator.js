@@ -1,28 +1,53 @@
+
+/* eslint no-trailing-spaces: 0 */
+
 import c3 from 'c3';
 import {healthColors} from 'account-health-tracker/enums/colors/';
 import health from 'account-health-tracker/enums/healthGroups/';
 
-const kpis = 'kpis';
+const X_AXIS_LABEL = 'kpis';
 const GRAPH_HEIGHT = 300;
 const GRAPH_TYPE = 'bar';
 const AXIS_TYPE = 'category';
 const AXIS_HEIGHT = 130;
 
 /**
+ * @description get kpi columsn
+ * @param kpis
+ * @returns {*[]}
+ */
+function getKpiColumns(kpis) {
+  const healthyData = [health.healthy];
+  const warningData = [health.warning];
+  const dangerData = [health.danger];
+  const labelData = [X_AXIS_LABEL];
+
+  kpis.forEach((kpi) => {
+    healthyData.push(kpi[health.healthy]);
+    warningData.push(kpi[health.warning]);
+    dangerData.push(kpi[health.danger]);
+    labelData.push(kpi.name);
+  });
+
+  return [
+    healthyData,
+    warningData,
+    dangerData,
+    labelData
+  ];
+}
+
+/**
  * @description generates the bar graph
  * @param element
+ * @param kpis
  */
-export default function generateGraph(element) {
+export default function generateGraph(element, kpis) {
   return c3.generate({
     data: {
-      x: kpis,
+      x: X_AXIS_LABEL,
       order: null,
-      columns: [
-        [health.healthy, 30, 200, 200, 300, 150, 250, 30],
-        [health.warning, 130, 100, 100, 200, 150, 50, 30],
-        [health.danger, 65, 70, 120, 0, 10, 15, 65],
-        [kpis, 'lorem', 'ipsum', 'dolor', 'amet', 'sits', 'begs', 'plays dead']
-      ],
+      columns: getKpiColumns(kpis),
       type: GRAPH_TYPE,
       groups: [
         [health.healthy, health.warning, health.danger]

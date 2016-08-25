@@ -3,28 +3,29 @@ import DefineMap from 'can-define/map/';
 import template from './bar-graph.stache!';
 import generateGraph from './graphGenerator';
 import {scrollBarContents, chartRightScrollLimit} from './barGraphUtils';
+import CompanyKpis from 'account-health-tracker/models/companyKpis';
 import './bar-graph.less!';
 
 export const ViewModel = DefineMap.extend({
-  kpis: {
-    get(last, set) {
-      this.get('kpiPromise')
-        .then(set)
-        .then(() => {
-          if (last) {
-            generateGraph();
-          }
+  kpis: '*',
+  kpiPromise: {
+    get() {
+      const context = this;
+      return CompanyKpis.getList({})
+        .then((kpis) => {
+          const element = context.componentElement;
+          context.kpis = kpis;
+          generateGraph(context.barGraphElement, kpis);
+          context.barGraphContainer = element.querySelector('.dashboard-summary-bar-chart');
+          context.chartWidth = context.barGraphContainer.clientWidth;
+          context.leftPosition = 0;
+          context.overflowContainerWidth = element.querySelector('.bar-chart-over-flow').clientWidth;
         });
     }
   },
-  kpiPromise: {
-    get() {
-      return new Promise((resolve) => {
-        resolve({});
-      });
-    }
-  },
+  barGraphContainer: '*',
   barGraphElement: '*',
+  componentElement: '*',
   chart: '*',
   leftPosition: {
     value: 0
@@ -48,11 +49,7 @@ export default Component.extend({
      */
     inserted(element) {
       const vm = this.viewModel;
-      vm.chart = generateGraph(element);
-      vm.barGraphElement = element.querySelector('.dashboard-summary-bar-chart');
-      vm.chartWidth = vm.barGraphElement.clientWidth;
-      vm.leftPosition = 0;
-      vm.overflowContainerWidth = element.querySelector('.bar-chart-over-flow').clientWidth;
+      vm.componentElement = element;
     },
     /**
      * @description left scroll click
