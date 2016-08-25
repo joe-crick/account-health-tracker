@@ -2,11 +2,8 @@ import Component from 'can-component/';
 import DefineMap from 'can-define/map/';
 import template from './bar-graph.stache!';
 import generateGraph from './graphGenerator';
+import { scrollBarContents, chartRightScrollLimit } from './barGraphUtils';
 import './bar-graph.less!';
-
-function getLeftPos(dashboardBarChart) {
-  return Number.parseInt(dashboardBarChart.style.left ? dashboardBarChart.style.left.replace('px', '') : 0, 10);
-}
 
 export const ViewModel = DefineMap.extend({
   kpis: {
@@ -36,25 +33,6 @@ export const ViewModel = DefineMap.extend({
     value: 0
   }
 });
-
-/**
- *
- * @param isAddition
- * @param chartLength
- */
-function scrollBarContents(isAddition, chartLength) {
-  const dashboardBarChart = this.viewModel.barGraphElement;
-  let leftPos = getLeftPos(dashboardBarChart);
-  if (leftPos <= 0 && Math.abs(leftPos) < chartLength) {
-    leftPos = isAddition ? leftPos + 400 : leftPos - 400;
-    dashboardBarChart.style.left = `${(leftPos)}px`;
-    this.viewModel.set('leftPosition', leftPos);
-  }
-}
-
-function chartRightScrollLimit() {
-  return this.chartLength - 200;
-}
 
 export default Component.extend({
   tag: 'aht-bar-graph',
