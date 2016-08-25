@@ -50,16 +50,46 @@ export const ViewModel = DefineMap.extend({
   title: {
     value: 'Foobar'
   },
+  /**
+   * @property {c3} account-health-tracker/components/dashboard/donut-graph.chart chart
+   * @parent account-health-tracker/components/dashboard/donut-graph.properties
+   *
+   * The graph object.
+   **/
   chart: '*',
+  /**
+   * @property {htmlbool} account-health-tracker/components/dashboard/donut-graph.showLabel showLabel
+   * @parent account-health-tracker/components/dashboard/donut-graph.properties
+   *
+   * Whether the graph should show a label/legend.
+   **/
   showLabel: {
     type: 'htmlbool'
   },
+  /**
+   * @property {Array<Number>} account-health-tracker/components/dashboard/donut-graph.healthyData healthyData
+   * @parent account-health-tracker/components/dashboard/donut-graph.properties
+   *
+   * Healthy data for the summary graph.
+   **/
   healthyData: {
     value: []
   },
+  /**
+   * @property {Array<Number>} account-health-tracker/components/dashboard/donut-graph.warningData warningData
+   * @parent account-health-tracker/components/dashboard/donut-graph.properties
+   *
+   * Warning data for the summary graph.
+   **/
   warningData: {
     value: []
   },
+  /**
+   * @property {Array<Number>} account-health-tracker/components/dashboard/donut-graph.dangerData dangerData
+   * @parent account-health-tracker/components/dashboard/donut-graph.properties
+   *
+   * Danger data for the summary graph.
+   **/
   dangerData: {
     value: []
   },
@@ -89,6 +119,12 @@ export default Component.extend({
   ViewModel,
   template,
   events: {
+    /**
+     * @function
+     *
+     * Creates a summary grid on component insertion
+     *
+     */
     inserted() {
       this.viewModel.chart = c3.generate({
         bindto: this.element.querySelector('.chart'),
@@ -126,10 +162,25 @@ export default Component.extend({
       });
     },
 
+    /**
+     * @function
+     *
+     * Destroys a chart object when the page is unloaded
+     *
+     */
     beforeremove() {
       this.viewModel.chart.destroy();
     },
 
+    /**
+     * @function
+     *
+     * Updates the donut chart when the data columns update.
+     *
+     * @param {DefineMap} viewModel
+     * @param {Event} ev
+     * @param {Array<Number>} dataColumns
+     */
     '{viewModel} dataColumns': function reloadChart(viewModel, ev, dataColumns) {
       viewModel.chart.load({
         columns: dataColumns,

@@ -1,7 +1,7 @@
 /**
  * @module {Module} account-health-tracker/components/dashboard/inline-alert <aht-inline-alert>
  *
- * @group account-health-tracker/components/general/inline-alert.properties 0 properties
+ * @group account-health-tracker/components/general/inline-alert.properties 4 properties
  *
  * @description Displays an inline-alert.
  *
@@ -13,7 +13,12 @@
  * To create a `<aht-inline-alert>` element, include it in your page
  *
  * ```
- * <aht-inline-alert/>
+ * <aht-inline-alert
+ *    alert-title="Testius with Buttonius"
+ *    message="Amet sit dolor ipsum lorraine"
+ *    action="anything"
+ *    button-label="No Click me 'k?">
+ * </aht-inline-alert>
  * ```
  *
  * ## Example
