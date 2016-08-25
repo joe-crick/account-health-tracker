@@ -13,8 +13,11 @@ export const ViewModel = DefineMap.extend({
   },
   chart: '*',
   showLabel: {
-    type: 'htmlbool'
+    type: 'htmlbool',
+    value: false
   },
+  height: 'number',
+  width: 'number',
   healthyData: {
     value: []
   },
@@ -70,9 +73,13 @@ export default Component.extend({
             }
           }
         },
+        size: {
+          height: this.viewModel.height,
+          width: this.viewModel.width
+        },
         donut: {
           label: {
-            show: false
+            show: this.viewModel.showLabel
           }
         },
         tooltip: {

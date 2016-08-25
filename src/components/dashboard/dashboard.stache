@@ -1,6 +1,7 @@
 <can-import from="account-health-tracker/components/dashboard/footer/" />
 <can-import from="account-health-tracker/components/dashboard/donut-graph/" />
 <can-import from="account-health-tracker/components/dashboard/bar-graph/" />
+<can-import from="account-health-tracker/components/dashboard/client-health/" />
 
 <p>{{message}}</p>
 
@@ -19,6 +20,11 @@
 <div class="row">
   <div class="col-sm-12">
     <aht-bar-graph />
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <aht-client-health />
   </div>
 </div>
 <div class="row">
