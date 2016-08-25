@@ -12,9 +12,9 @@ function filterEntries(clientId) {
   });
   const byValue = _.groupBy(kpis, 'value');
   return {
-    healthy: byValue.healthy ? byValue.healthy.length : 0,
-    warning: byValue.warning ? byValue.warning.length : 0,
-    danger: byValue.danger ? byValue.danger.length : 0
+    healthy: [byValue.healthy ? byValue.healthy.length : 0],
+    warning: [byValue.warning ? byValue.warning.length : 0],
+    danger: [byValue.danger ? byValue.danger.length : 0]
   };
 }
 
