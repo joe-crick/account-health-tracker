@@ -24,3 +24,7 @@ export default function (lng) {
     });
   });
 }
+
+export function translate(key) {
+  return i18next.t(key);
+}

@@ -1,4 +1,5 @@
 import connect from 'can-connect';
+import $ from 'jquery';
 import constructor from 'can-connect/constructor/';
 import canMap from 'can-connect/can/map/';
 import canRef from 'can-connect/can/ref/';
@@ -48,6 +49,8 @@ const superMap = function superMap(options = {}) {
   // 	}
   // 	behaviors.push(callbacksCache,fallThroughCache);
   // }
+
+  options.ajax = $.ajax;
 
   return connect(behaviors, options);
 };

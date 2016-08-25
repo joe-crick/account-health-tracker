@@ -14,11 +14,16 @@
         "getKpisErrorTitle": "Bar Graph Error",
         "getKpisErrorMessage": "Dang! We experienced an error trying to get your kpis. Please try back later. If this keeps happening, send us a note."
       },
+      "chart": {
+        "keys": {
+          "healthy": "Healthy",
+          "warning": "Warning",
+          "danger": "Danger"
+        }
+      },
       "clients": {
-
       },
       "company": {
-
       },
       "footer": {
         "actions": {
