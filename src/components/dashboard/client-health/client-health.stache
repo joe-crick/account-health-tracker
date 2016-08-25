@@ -24,31 +24,37 @@
     </tr>
   </thead>
   <tbody>
-    {{#each clients}}
+    {{#if clients.length}}
+      {{#each clients}}
+      <tr>
+        <td>{{name}}</td>
+        <td>
+          {{#switch type}}
+            {{#case 'improving'}}
+            <span class="glyphicon glyphicon-arrow-up"></span>
+            {{/case}}
+            {{#case 'declining'}}
+            <span class="glyphicon glyphicon-arrow-down"></span>
+            {{/case}}
+            {{#case 'stable'}}
+            <span class="glyphicon glyphicon-arrow-right"></span>
+            {{/case}}
+          {{/switch}}
+        </td>
+        <td>
+        <aht-donut-graph
+          height="35"
+          width="35"
+          {healthy-data}="healthyData" 
+          {warning-data}="warningData" 
+          {danger-data}="dangerData" />
+        </td>
+      </tr>
+      {{/each}}
+    {{else}}
     <tr>
-      <td>{{name}}</td>
-      <td>
-        {{#switch type}}
-          {{#case 'improving'}}
-          <span class="glyphicon glyphicon-arrow-up"></span>
-          {{/case}}
-          {{#case 'declining'}}
-          <span class="glyphicon glyphicon-arrow-down"></span>
-          {{/case}}
-          {{#case 'stable'}}
-          <span class="glyphicon glyphicon-arrow-right"></span>
-          {{/case}}
-        {{/switch}}
-      </td>
-      <td>
-      <aht-donut-graph
-        height="35"
-        width="35"
-        {healthy-data}="healthyData" 
-        {warning-data}="warningData" 
-        {danger-data}="dangerData" />
-      </td>
+      <td colspan="3" class="bg-danger text-center">{{i18n 'dashboard.clients.table.results.none'}}</td>
     </tr>
-    {{/each}}
+    {{/if}}
   </tbody>
 </table>
