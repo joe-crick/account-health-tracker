@@ -15,6 +15,7 @@ Below are a few relevant links for this project:
  - [Project Presentation](https://docs.google.com/presentation/d/1b27MbJzDhoPTnDpNv0ulTo7sCLTAs4CUOslIm8mVyZc/edit#slide=id.g35f391192_00)
  - [Test Suite](https://ahm.testlodge.com/projects/18661/test_runs/224447/run?user_id=27211)
  - [API Docs](https://github.com/bitovi/account-health-tracker/wiki/API)
+ - [ERD](https://docs.google.com/document/d/1RNHDVUHJN5HI6_Moio7RH_KdrYY7EclVNDpjDQ6qwnw/edit)
 
 ## Getting started
 
