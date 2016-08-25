@@ -18,40 +18,43 @@ function canScroll(leftPos, chartWidth, isAddition) {
 }
 
 /**
- *
+ * @description Updates the position of the bar graph relative to its container
  * @param isAddition
  * @param chartWidth
  */
 function scrollBarContents(isAddition, chartWidth) {
-  const dashboardBarChart = this.viewModel.barGraphContainer;
+  const dashboardBarChart = this.barGraphContainer;
   const leftPos = getLeftPos(dashboardBarChart);
   if (canScroll(leftPos, chartWidth, isAddition)) {
     const newPos = isAddition ? leftPos + 400 : leftPos - 400;
     dashboardBarChart.style.left = `${(newPos)}px`;
-    this.viewModel.set('leftPosition', newPos);
+    this.set('leftPosition', newPos);
   }
 }
 
 /**
  * @description chart right scroll limit
+ * @param viewModel
  * @returns {number}
  */
-function chartRightScrollLimit() {
-  return this.chartWidth - this.overflowContainerWidth;
+function chartRightScrollLimit(viewModel) {
+  return viewModel.chartWidth - viewModel.overflowContainerWidth;
 }
 
 /**
  * @description Scroll bar contents left
+ * @param viewModel
  */
-function scrollBarContentsLeft() {
-  scrollBarContents.call(this, true, this.viewModel.chartWidth);
+function scrollBarContentsLeft(viewModel) {
+  scrollBarContents.call(viewModel, true, viewModel.chartWidth);
 }
 
 /**
  * @description Scroll bar contents right
+ * @param viewModel
  */
-function scrollBarContentsRight() {
-  scrollBarContents.call(this, false, chartRightScrollLimit.call(this.viewModel));
+function scrollBarContentsRight(viewModel) {
+  scrollBarContents.call(viewModel, false, chartRightScrollLimit(viewModel));
 }
 
 export {scrollBarContentsLeft, scrollBarContentsRight, chartRightScrollLimit};

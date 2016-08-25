@@ -33,13 +33,13 @@ export default Component.extend({
      * @description left scroll click
      */
     '.left-scroll click'() {
-      scrollBarContentsLeft.call(this);
+      scrollBarContentsLeft(this.viewModel);
     },
     /**
      * @description right scroll click
      */
     '.right-scroll click'() {
-      scrollBarContentsRight.call(this);
+      scrollBarContentsRight(this.viewModel);
     },
     /**
      * @description on data column update
