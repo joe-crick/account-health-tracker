@@ -73,7 +73,7 @@ export default Component.extend({
      * @param ev
      * @param kpis
      */
-    '{viewModel} kpis': function (viewModel, ev, kpis) {
+    '{viewModel} kpis': function kpiChange(viewModel, ev, kpis) {
       if (viewModel.chart) {
         viewModel.chart.load({
           columns: kpis,
