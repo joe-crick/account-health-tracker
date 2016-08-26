@@ -1,7 +1,4 @@
 import DefineMap from 'can-define/map/';
-import Kpi from 'account-health-tracker/models/kpi';
-import {healthGroups} from 'account-health-tracker/enums/';
-import graphConfig from './graphConfig';
 
 export default DefineMap.extend({
   /**

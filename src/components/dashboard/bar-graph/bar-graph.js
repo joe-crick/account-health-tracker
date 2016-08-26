@@ -1,3 +1,5 @@
+/* eslint indent: 0 */
+
 /**
  * @module {Module} account-health-tracker/components/dashboard/bar-graph <aht-bar-graph>
  * @parent aht.dashboard
