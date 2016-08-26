@@ -1,5 +1,6 @@
 /**
  * @module {can.Map} account-health-tracker/models/kpi Kpi
+ * @parent js.models
  *
  * @group account-health-tracker/models/kpi.properties 4 properties
  */

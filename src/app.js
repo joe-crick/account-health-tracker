@@ -3,10 +3,7 @@ import route from 'can-route';
 import 'can-route-pushstate';
 import translation from 'account-health-tracker/translation';
 
-// Remove fixtures in production
-//!steal-remove-start
 import 'account-health-tracker/models/fixtures/';
-//!steal-remove-end
 
 const AppViewModel = DefineMap.extend({
   route: 'string',
