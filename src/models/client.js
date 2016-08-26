@@ -1,5 +1,6 @@
 /**
  * @module {can.Map} account-health-tracker/models/client Client
+ * @parent js.models
  *
  * @group account-health-tracker/models/client.properties 3 properties
  */
