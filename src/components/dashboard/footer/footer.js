@@ -1,6 +1,6 @@
 /**
  * @module {Module} account-health-tracker/components/dashboard/footer <aht-footer>
- * @parent aht.dashboard
+ * @parent js.components
  *
  * @group account-health-tracker/components/dashboard/footer.properties 0 properties
  *
@@ -19,7 +19,7 @@
  *
  * ## Example
  *
- * @demo account-health-tracker/components/dashboard/footer.html
+ * @demo src/components/dashboard/footer/footer.html
  *
  */
 import Component from 'can-component';

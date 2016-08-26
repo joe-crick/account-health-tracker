@@ -1,6 +1,6 @@
 /**
  * @module {Module} account-health-tracker/components/dashboard/donut-graph <aht-donut-graph>
- * @parent aht.dashboard
+ * @parent js.components
  *
  * @group account-health-tracker/components/dashboard/donut-graph.properties 0 properties
  *
@@ -19,7 +19,7 @@
  *
  * ## Example
  *
- * @demo account-health-tracker/components/dashboard/donut-graph.html
+ * @demo src/components/dashboard/donut-graph/donut-graph.html
  *
  */
 import Component from 'can-component/';
@@ -123,7 +123,7 @@ export default Component.extend({
   template,
   events: {
     /**
-     * @function
+     * @function inserted
      *
      * Creates a summary grid on component insertion
      *
@@ -170,7 +170,7 @@ export default Component.extend({
     },
 
     /**
-     * @function
+     * @function beforeremove
      *
      * Destroys a chart object when the page is unloaded
      *
@@ -180,7 +180,7 @@ export default Component.extend({
     },
 
     /**
-     * @function
+     * @function {viewModel} dataColumns
      *
      * Updates the donut chart when the data columns update.
      *

@@ -1,5 +1,6 @@
 /**
  * @module {Module} account-health-tracker/components/dashboard <aht-dashboard>
+ * @parent js.components
  * @group account-health-tracker/components/dashboard.properties 3 properties
  *
  * @description Provides an overview of the kpis for the company.

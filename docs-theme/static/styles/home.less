@@ -1,0 +1,39 @@
+.home-intro {
+  text-align: center;
+}
+.home-intro-copy {
+  background: @gray-lighter;
+  //font-family: 'Interstate-Light', Helvetica, Arial, Sans-serif;;
+  padding: 10px 0;
+  margin-bottom: (@gutter/2);
+  font-size: .9em;
+}
+.home-features {
+  width: 100%;
+  margin: 0 auto 50px;
+  display: inline-flex;
+}
+.feature {
+  flex: 1 1;
+  margin-right: @gutter;
+  text-align: center;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  img {
+    margin-bottom: @gutter;
+  }
+
+  h2 {
+    text-decoration: none;
+    border: 2px solid @brand-tertiary;
+  }
+
+  button {
+    text-transform: uppercase;
+    position: relative;
+    margin-top: -45%;
+  }
+}

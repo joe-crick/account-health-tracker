@@ -1,0 +1,36 @@
+header {
+  width: 100%;
+  margin-bottom: (@gutter * 2);
+  border-bottom: 2px solid @pigeon;
+  padding-top: (@gutter * 2);
+  padding-bottom: (@gutter * 2);
+
+  nav {
+    display: inline-block;
+
+    ul {
+      display: inline-block;
+      margin: 0;
+      padding-top: (@gutter * 2);
+      -webkit-margin-before: 0em;
+      -webkit-margin-after: 0em;
+      -webkit-padding-start: 0px;
+    }
+    
+    li {
+      display: inline-block;
+      margin-right: @gutter;
+
+      a {
+        color: @peacock;
+        text-decoration: none;
+        font-size: 20px;
+
+        &:hover {
+          opacity: 0.5;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

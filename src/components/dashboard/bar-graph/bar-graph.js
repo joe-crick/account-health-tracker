@@ -2,7 +2,7 @@
 
 /**
  * @module {Module} account-health-tracker/components/dashboard/bar-graph <aht-bar-graph>
- * @parent aht.dashboard
+ * @parent js.components
  *
  * @group account-health-tracker/components/dashboard/bar-graph.properties 0 properties
  *
@@ -21,7 +21,7 @@
  *
  * ## Example
  *
- * @demo account-health-tracker/components/dashboard/bar-graph.html
+ * @demo src/components/dashboard/bar-graph/bar-graph.html
  *
  */
 import Component from 'can-component/';
@@ -73,7 +73,7 @@ export default Component.extend({
      * @param ev
      * @param kpis
      */
-    '{viewModel} kpis': function (viewModel, ev, kpis) {
+    '{viewModel} kpis': function kpiChange(viewModel, ev, kpis) {
       if (viewModel.chart) {
         viewModel.chart.load({
           columns: kpis,
