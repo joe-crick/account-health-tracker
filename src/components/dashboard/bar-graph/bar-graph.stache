@@ -1,21 +1,18 @@
 <can-import from="account-health-tracker/components/general/inline-alert/"/>
 <div class="row">
     <div class="hidden-xs col-sm-12">
-      {{#if kpiPromise.isResolved}}
         {{#if kpis}}
             <div class="scroller left-scroll {{isLeftScrollDisabled}}">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             </div>
-            <div class="bar-chart-over-flow">
-                <div class="dashboard-summary-bar-chart"></div>
-            </div>
-            <div class="scroller right-scroll {{isRightScrollDisabled}}"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
         {{/if}}
-      {{else}}
-          <aht-inline-alert
-                  alert-title="{{i18n 'dashboard.barChart.getKpisErrorTitle'}}"
-                  message="{{i18n 'dashboard.barChart.getKpisErrorMessage'}}">
-          </aht-inline-alert>
-      {{/if}}
+        <div class="bar-chart-over-flow">
+            <div class="dashboard-summary-bar-chart"></div>
+        </div>
+        {{#if kpis}}
+            <div class="scroller right-scroll {{isRightScrollDisabled}}">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </div>
+        {{/if}}
     </div>
 </div>

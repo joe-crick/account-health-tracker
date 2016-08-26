@@ -11,7 +11,7 @@
  *
  * @body
  *
- * To create a `<aht-bar-graph>` element, include it in your page
+ * To create a `<aht-bar-graph {kpis}=kpis>` element, include it in your page
  *
  * ```
  * <aht-bar-graph/>
@@ -35,17 +35,17 @@ export default Component.extend({
   template,
   events: {
     /**
-     * @description inserted
-     * @param element
+     * @description destroy chart on remove
+     * @param {DOMElement} element
      */
     inserted(element) {
-      const viewModel = this.viewModel;
-      viewModel.barGraphContainer = element.querySelector('.dashboard-summary-bar-chart');
-      viewModel.overflowContainerWidth = element.querySelector('.bar-chart-over-flow').clientWidth;
-      viewModel.chartWidth = viewModel.barGraphContainer.clientWidth;
-      viewModel.leftPosition = 0;
-      // Generate a blank graph, which will be populated once the data loads
-      viewModel.chart = generateGraph(viewModel.barGraphContainer, viewModel.dataColumns);
+        const viewModel = this.viewModel;
+        viewModel.barGraphContainer = element.querySelector('.dashboard-summary-bar-chart');
+        viewModel.overflowContainerWidth = element.querySelector('.bar-chart-over-flow').clientWidth;
+        viewModel.chartWidth = viewModel.barGraphContainer.clientWidth;
+        viewModel.leftPosition = 0;
+        // Generate a blank graph, which will be populated once the data loads
+        viewModel.chart = generateGraph(viewModel.barGraphContainer, viewModel.dataColumns);
     },
     /**
      * @description destroy chart on remove

@@ -1,6 +1,6 @@
 export default {
   xAxis: {
-    label: 'kpis',
+    label: 'label',
     type: 'category',
     height: 130
   },
