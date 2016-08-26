@@ -1,0 +1,26 @@
+.btn {
+  padding: 10px 40px;
+  margin: (@gutter/2);
+}
+
+.btn-hero-dark {
+  background: @brand-secondary;
+  color: @brand-tertiary;
+  border: 2px solid @brand-secondary;
+  &:hover, &:focus {
+    background-color: transparent;
+    transition: all .5s ease-in-out;
+    color: @brand-secondary;
+  }
+}
+
+.btn-hero-light {
+  background: @brand-tertiary;
+  color: @brand-secondary;
+  border: 2px solid @brand-tertiary;
+  &:hover, &:focus {
+    background-color: transparent;
+    transition: all .5s ease-in-out;
+    color: @brand-tertiary;
+  }
+}

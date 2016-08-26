@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js iris-docs" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>{{makeParentTitle}} {{#if title}}- {{title}} {{else}} {{#if name}}- {{name}}{{/if}}{{/if}}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	{{^devBuild}}
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	{{/devBuild}}
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+			<div class="logo-menu">
+				<img width="80" src="/docs-theme/static/img/logo.svg" alt="AHT"/>
+			</div>
+			<ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <!-- <li><a href="#">Design</a></li> -->
+        <!-- li><a href="variables__color-palette.less.html">Styles</a></li-->
+        <li><a href="js.html">JavaScript</a></li>
+        <li><a href="apis.html">API</a></li>
+      </ul>
+		</nav>
+	</header>
+
+	{{{content}}}
+
+	<footer>
+	  <p>Built by <a href="http://bitovi.com/">Bitovi</a> using <a href="http://documentjs.com/">DocumentJS</a>.
+	</footer>
+	<script type="text/javascript">
+		var docObject = {{{docObjectString}}};
+	</script>
+
+	{{#if devBuild}}
+		<script type='text/javascript'
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal/steal.js"></script>
+	{{else}}
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	{{/if}}
+</body>
+
+</html>

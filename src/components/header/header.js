@@ -1,5 +1,6 @@
 /**
  * @module {Module} account-health-tracker/components/dashboard/header <aht-header>
+ * @parent js.components
  *
  * @group account-health-tracker/components/general/header.properties 0 properties
  *
@@ -18,7 +19,7 @@
  *
  * ## Example
  *
- * @demo account-health-tracker/components/dashboard/header.html
+ * @demo src/components/header/header.html
  *
  */
 import Component from 'can-component';

@@ -1,0 +1,120 @@
+.sidebar {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin-right: @gutter;
+  padding-left: @gutter;
+  padding-right: @gutter;
+  padding-top: @gutter;
+  background: @pigeon;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.primary-grouping {
+
+  li {
+    span {
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      color: @grouse;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    a {
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      color: @peacock;
+      text-decoration: none;
+      font-size: 16px;
+      text-transform: none;
+      letter-spacing: 0;
+
+      &:hover {
+        opacity: 0.5;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.sidebar {
+
+  .api {
+    li li:first-of-type {
+      padding-top: (@gutter/2);
+
+      &.heading {
+        margin-bottom: @gutter;
+      }
+    }
+
+    li li:last-of-type {
+      padding-bottom: @gutter;
+    }
+
+    li li ul {
+      border-bottom: 1px solid @gray;
+      margin-left: -@gutter;
+      padding-left: @gutter;
+      margin-bottom: @gutter;
+
+      &:last-of-type {
+        border: none;
+        margin-bottom: 0;
+      }
+    }
+
+    li.active.collapsed > :not(a) {
+      display: none;
+    }
+
+    li li li {
+      text-indent: @gutter;
+    }
+
+    li li li li {
+      text-indent: @gutter;
+    }
+
+    > li.active > a {
+      display: block;
+    }
+
+    li li.parent {
+      text-indent: @gutter;
+    }
+
+    li li li.parent {
+      text-indent: @gutter;
+    }
+
+    li li li.parent li {
+      text-indent: @gutter;
+    }
+  }
+}
+
+//Hides redundant top-level sidebar nav entries.
+.sidebar {
+  .api {
+    li.active > a.sidebar-title  {
+      display: none;
+    }
+    li.active:nth-child(2) > a.sidebar-title,
+    li.active:nth-child(3) > a.sidebar-title,
+    li.active:nth-child(4) > a.sidebar-title,
+    li.active:nth-child(5) > a.sidebar-title {
+      display: none;
+    }
+  }
+}

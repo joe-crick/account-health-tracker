@@ -1,4 +1,8 @@
 {
+  "siteDefaults": {
+    "templates": "docs-theme/templates/",
+    "static": "docs-theme/static/"
+  },
   "sites": {
     "docs": {
       "dest": "docs",
@@ -7,7 +11,7 @@
         "page": "docs"
       },
       "glob": {
-        "pattern": "src/**/*.{js,md}"
+        "pattern": "{src,docs-theme/md}/**/*.{less,md,js}"
       }
     }
   }

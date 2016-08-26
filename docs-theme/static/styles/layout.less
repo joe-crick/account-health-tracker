@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+  
+  &.iris-docs {
+    border-top: 5px solid transparent;
+    -moz-border-image: -moz-linear-gradient(right, @warbler 0%, @peacock 100%);
+    -webkit-border-image: -webkit-linear-gradient(right, @warbler 0%, @peacock 100%);
+    border-image: linear-gradient(to left, @warbler 0%, @peacock 100%);
+    border-image-slice: 1;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+::selection {
+  color: @crane;
+  background: @peacock;
+}
+
+::-moz-selection {
+  color: @crane;
+  background: @peacock;
+}
+
+body {
+  margin: 0 auto;
+  padding-left: @gutter;
+  padding-right: @gutter;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: @swift;
+  font-size: 16px;
+  &.docs {
+    width: 1080px;
+  }
+}
+
+// This was moved from the src folder to lui
+// original: https://github.com/FORK-LSCO/gumby/commit/24193bd32510a6401f085f421c8b9b49f007becc
+@media (min-width: 640px) {
+  overflow-x: initial;
+}
+
+.content {
+  display: inline-block;
+  width: 75%;
+  padding-bottom: @gutter;
+
+  @media (max-width: 1202px) { //quick n dirty fluidity maintenance 
+    width: calc(100% - (220px + @gutter));
+  }
+}
+
+.contents {
+  margin-bottom: @gutter;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}

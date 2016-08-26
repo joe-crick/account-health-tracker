@@ -17,7 +17,7 @@ import callbacksOnce from 'can-connect/constructor/callbacks-once/';
 
 /**
  * @typedef {{}} account-health-tracker/connections/superMap superMap
- * @parent api.models
+ * @parent js.models
 
  * A connection with the required can-connect behaviors.
  * @option {Object} options key-value pairs to configure can-connect.

@@ -1,5 +1,6 @@
 /**
  * @module {Module} account-health-tracker/components/dashboard/inline-alert <aht-inline-alert>
+ * @parent js.components
  *
  * @group account-health-tracker/components/general/inline-alert.properties 4 properties
  *
@@ -23,7 +24,7 @@
  *
  * ## Example
  *
- * @demo account-health-tracker/components/dashboard/inline-alert.html
+ * @demo src/components/inline-alert/inline-alert.html
  *
  */
 import Component from 'can-component';
