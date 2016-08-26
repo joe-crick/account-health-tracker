@@ -5,7 +5,6 @@
   "homepage": "",
   "author": {
     "name": "Bitovi",
-    "email": "info@bitovi.com",
     "url": "http://bitovi.com"
   },
   "scripts": {
@@ -13,7 +12,9 @@
     "start": "NODE_ENV=production node bin/server",
     "develop": "node bin/server",
     "document": "documentjs",
-    "build": "npm run clean && node bin/build",
+    "api_docs": "raml2html src/api_documentation.raml > docs/apis.html",
+    "run_build": "node bin/build",
+    "build": "run-s clean run_build api_docs",
     "clean": "rimraf build && rimraf dist",
     "lint": "eslint src test"
   },
@@ -91,6 +92,8 @@
     "fs-extra": "^0.30.0",
     "funcunit": "~3.1.0-pre.1",
     "jshint": "^2.9.3",
+    "raml2html": "^3.0.0",
+    "npm-run-all": "^3.0.0",
     "steal-mocha": "0.0.3",
     "steal-qunit": "^0.1.1",
     "steal-tools": "^0.16.7",
