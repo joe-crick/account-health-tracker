@@ -1,60 +1,64 @@
 <can-import from="account-health-tracker/components/dashboard/donut-graph/" />
-
-<header class="row">
-  <div class="title col-sm-8">{{i18n 'dashboard.clients.header.title'}}</div>
-  <form class="form-inline col-sm-4">
-    <div class="form-group">
-      <label class="sr-only" for="search">{{i18n 'dashboard.clients.header.title'}}</label>
-      <div class="input-group">
-        <input type="search" class="form-control" id="search" placeholder="{{i18n 'dashboard.clients.header.search'}}">
-        <div class="input-group-addon">
-          <div class="glyphicon glyphicon-search"></div>
+{{#if clientPromise.isResolved}}
+  <header class="row">
+    <div class="title col-sm-8">{{i18n 'dashboard.clients.header.title'}}</div>
+    <form class="form-inline col-sm-4">
+      <div class="form-group">
+        <label class="sr-only" for="search">{{i18n 'dashboard.clients.header.title'}}</label>
+        <div class="input-group">
+          <input type="search" class="form-control" id="search" placeholder="{{i18n 'dashboard.clients.header.search'}}">
+          <div class="input-group-addon">
+            <div class="glyphicon glyphicon-search"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
-</header>
+    </form>
+  </header>
 
-<table class="table">
-  <thead>
-    <tr>
-      <td>{{i18n 'dashboard.clients.table.header.client'}}</td>
-      <td>{{i18n 'dashboard.clients.table.header.trend'}}</td>
-      <td>{{i18n 'dashboard.clients.table.header.health'}}</td>
-    </tr>
-  </thead>
-  <tbody>
-    {{#if clients.length}}
-      {{#each clients}}
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td>{{name}}</td>
-        <td>
-          {{#switch type}}
-            {{#case 'improving'}}
-            <span class="glyphicon glyphicon-arrow-up"></span>
-            {{/case}}
-            {{#case 'declining'}}
-            <span class="glyphicon glyphicon-arrow-down"></span>
-            {{/case}}
-            {{#case 'stable'}}
-            <span class="glyphicon glyphicon-arrow-right"></span>
-            {{/case}}
-          {{/switch}}
-        </td>
-        <td>
-        <aht-donut-graph
-          height="35"
-          width="35"
-          {healthy-data}="healthyData" 
-          {warning-data}="warningData" 
-          {danger-data}="dangerData" />
-        </td>
+        <th>{{i18n 'dashboard.clients.table.header.client'}}</th>
+        <th>{{i18n 'dashboard.clients.table.header.trend'}}</th>
+        <th>{{i18n 'dashboard.clients.table.header.health'}}</th>
       </tr>
-      {{/each}}
-    {{else}}
-    <tr>
-      <td colspan="3" class="bg-danger text-center">{{i18n 'dashboard.clients.table.results.none'}}</td>
-    </tr>
-    {{/if}}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {{#if clients.length}}
+        {{#each clients}}
+        <tr>
+          <td>{{name}}</td>
+          <td>
+            <span class="glyphicon glyphicon-arrow-up"></span>
+            <!-- 
+            {{#switch type}}
+              {{#case 'improving'}}
+              <span class="glyphicon glyphicon-arrow-up"></span>
+              {{/case}}
+              {{#case 'declining'}}
+              <span class="glyphicon glyphicon-arrow-down"></span>
+              {{/case}}
+              {{#case 'stable'}}
+              <span class="glyphicon glyphicon-arrow-right"></span>
+              {{/case}}
+            {{/switch}}
+            -->
+          </td>
+          <td>
+          <aht-donut-graph
+            height="35"
+            width="35"
+            {healthy-data}="healthy" 
+            {warning-data}="warning" 
+            {danger-data}="danger" />
+          </td>
+        </tr>
+        {{/each}}
+      {{else}}
+      <tr>
+        <td colspan="3" class="bg-danger text-center">{{i18n 'dashboard.clients.table.results.none'}}</td>
+      </tr>
+      {{/if}}
+    </tbody>
+  </table>
+{{/if}}
