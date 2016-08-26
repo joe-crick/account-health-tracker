@@ -10,6 +10,12 @@
       }
     },
     "dashboard": {
+      "summarySectionTitle": "Overall Health",
+      "barChart": {
+        "noKpisTitle": "No KPIS",
+        "noKpisMessage": "You don't have any KPIs defined.",
+        "noKpisButtonLabel": "Add a KPI"
+      },
       "chart": {
         "keys": {
           "healthy": "Healthy",
@@ -34,7 +40,6 @@
         }
       },
       "company": {
-
       },
       "footer": {
         "actions": {

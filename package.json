@@ -49,6 +49,9 @@
         "deps": [
           "jquery"
         ]
+      },
+      "c3": {
+        "format": "cjs"
       }
     }
   },

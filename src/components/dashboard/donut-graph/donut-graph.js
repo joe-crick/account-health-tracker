@@ -26,10 +26,10 @@ import Component from 'can-component/';
 import DefineMap from 'can-define/map/';
 import DefineList from 'can-define/list/';
 import c3 from 'c3';
-import './donut-graph.less!';
 import template from './donut-graph.stache!';
+import {healthColors, healthGroups} from 'account-health-tracker/enums/';
 import { translate } from 'account-health-tracker/translation';
-import { healthColors } from 'account-health-tracker/helpers';
+import './donut-graph.less!';
 
 export const ViewModel = DefineMap.extend({
   /**
@@ -109,9 +109,9 @@ export const ViewModel = DefineMap.extend({
       const dangerData = this.dangerData;
 
       return [
-        new DefineList(['healthy']).concat(healthyData),
-        new DefineList(['warning']).concat(warningData),
-        new DefineList(['danger']).concat(dangerData)
+        new DefineList([healthGroups.healthy]).concat(healthyData),
+        new DefineList([healthGroups.warning]).concat(warningData),
+        new DefineList([healthGroups.danger]).concat(dangerData)
       ];
     }
   }
@@ -130,7 +130,7 @@ export default Component.extend({
      */
     inserted() {
       this.viewModel.chart = c3.generate({
-        bindto: this.element.querySelector('.chart'),
+        bindto: this.element.querySelector('.donut-chart'),
         data: {
           columns: this.viewModel.dataColumns,
           colors: {

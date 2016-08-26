@@ -22,10 +22,40 @@
  */
 import Component from 'can-component/';
 import DefineMap from 'can-define/map/';
-import './dashboard.less!';
+import Company from 'account-health-tracker/models/company';
 import template from './dashboard.stache!';
+import './dashboard.less!';
 
 export const ViewModel = DefineMap.extend({
+  /**
+   * @property {account-health-tracker/models/company}
+   *
+   * Provides a company, once companyPromise resolves.
+   */
+  company: Company,
+  /**
+   * @property {Promise<account-health-tracker/models/company>|undefined}
+   *
+   * Provides a company
+   *
+   * @signature `Promise<account-health-tracker/models/company>`
+   *
+   *   Given a valid `id`, the company promise.
+   *
+   * @signature `undefined`
+   *
+   *   Given an invalid `id`, the company promise.
+   *
+   */
+  companyPromise: {
+    get() {
+      const context = this;
+      return Company.get({id: 1})
+        .then((company) => {
+          context.company = company;
+        });
+    }
+  },
   /**
    * @property {Array<Number>} account-health-tracker/components/dashboard.healthyData healthyData
    * @parent account-health-tracker/components/dashboard.properties

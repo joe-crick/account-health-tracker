@@ -3,32 +3,32 @@
 <can-import from="account-health-tracker/components/dashboard/bar-graph/" />
 <can-import from="account-health-tracker/components/dashboard/client-health/" />
 
-<p>{{message}}</p>
-
-<div class="row">
-  <div class="col-sm-8">
-    <h1>Bitovi</h1>
-    <p>Overall Health</p>
+{{#if companyPromise.isResolved}}
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>Bitovi</h1>
+      <p>{{i18n 'dashboard.summarySectionTitle'}}</p>
+    </div>
+    <div class="col-sm-4">
+      <aht-donut-graph show-label
+        {healthy-data}="healthyData"
+        {warning-data}="warningData"
+        {danger-data}="dangerData" />
+    </div>
   </div>
-  <div class="col-sm-4">
-    <aht-donut-graph show-label 
-      {healthy-data}="healthyData" 
-      {warning-data}="warningData" 
-      {danger-data}="dangerData" />
+  <div class="row">
+    <div class="col-sm-12">
+      <aht-bar-graph {kpis}="company.columns" />
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-sm-12">
-    <aht-bar-graph />
+  <div class="row">
+    <div class="col-sm-12">
+      <aht-client-health />
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-sm-12">
-    <aht-client-health />
+  <div class="row">
+    <div class="col-sm-3 col-sm-offset-9">
+      <aht-footer />
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-sm-3 col-sm-offset-9">
-    <aht-footer />
-  </div>
-</div>
+{{/if}}

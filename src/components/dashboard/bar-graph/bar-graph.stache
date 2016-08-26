@@ -1,1 +1,18 @@
-<p>{{message}}</p>
+<can-import from="account-health-tracker/components/general/inline-alert/"/>
+<div class="row">
+    <div class="hidden-xs col-sm-12">
+        {{#if kpis}}
+            <div class="scroller left-scroll {{isLeftScrollDisabled}}">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            </div>
+        {{/if}}
+        <div class="bar-chart-over-flow">
+            <div class="dashboard-summary-bar-chart"></div>
+        </div>
+        {{#if kpis}}
+            <div class="scroller right-scroll {{isRightScrollDisabled}}">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </div>
+        {{/if}}
+    </div>
+</div>

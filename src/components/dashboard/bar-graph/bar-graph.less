@@ -1,3 +1,32 @@
+@import 'locate://c3/c3.css';
+
 aht-bar-graph {
-	display: block;
+  display: block;
+
+  .scroller {
+    display: inline-block;
+    font-size: 3em;
+    vertical-align: middle;
+    position: relative;
+    top: -5em;
+    &:hover {
+      cursor: pointer;
+    }
+    &.disabled {
+      cursor: not-allowed;
+      color: lightgray;
+    }
+  }
+
+  .bar-chart-over-flow {
+    overflow: hidden;
+    display: inline-block;
+    width: 80%;
+  }
+
+  .dashboard-summary-bar-chart {
+    transition: all 0.5s ease;
+    position: relative;
+  }
+
 }
