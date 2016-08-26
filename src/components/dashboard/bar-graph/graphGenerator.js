@@ -2,6 +2,7 @@
 
 import c3 from 'c3';
 import { healthColors, healthGroups } from 'account-health-tracker/enums/';
+import { translate } from 'account-health-tracker/translation';
 import graphConfig from './graphConfig';
 
 /**
@@ -23,6 +24,11 @@ export default function generateGraph(element, kpis) {
         healthy: healthColors.healthy,
         warning: healthColors.warning,
         danger: healthColors.danger
+      },
+      names: {
+        healthy: translate('dashboard.chart.keys.healthy'),
+        warning: translate('dashboard.chart.keys.warning'),
+        danger: translate('dashboard.chart.keys.danger')
       }
     },
     legend: {
