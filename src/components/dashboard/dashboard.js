@@ -33,7 +33,7 @@ export const ViewModel = DefineMap.extend({
    * Healthy data for the summary graph.
    **/
   healthyData: {
-    value: []
+    value: [80]
   },
   /**
    * @property {Array<Number>} account-health-tracker/components/dashboard.warningData warningData
@@ -42,7 +42,7 @@ export const ViewModel = DefineMap.extend({
    * Warning data for the summary graph.
    **/
   warningData: {
-    value: []
+    value: [15]
   },
   /**
    * @property {Array<Number>} account-health-tracker/components/dashboard.dangerData dangerData
@@ -51,7 +51,7 @@ export const ViewModel = DefineMap.extend({
    * Danger data for the summary graph.
    **/
   dangerData: {
-    value: []
+    value: [5]
   }
 });
 
