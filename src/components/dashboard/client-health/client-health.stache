@@ -18,9 +18,9 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <td>{{i18n 'dashboard.clients.table.header.client'}}</td>
-        <td>{{i18n 'dashboard.clients.table.header.trend'}}</td>
-        <td>{{i18n 'dashboard.clients.table.header.health'}}</td>
+        <th>{{i18n 'dashboard.clients.table.header.client'}}</th>
+        <th>{{i18n 'dashboard.clients.table.header.trend'}}</th>
+        <th>{{i18n 'dashboard.clients.table.header.health'}}</th>
       </tr>
     </thead>
     <tbody>
@@ -29,6 +29,8 @@
         <tr>
           <td>{{name}}</td>
           <td>
+            <span class="glyphicon glyphicon-arrow-up"></span>
+            <!-- 
             {{#switch type}}
               {{#case 'improving'}}
               <span class="glyphicon glyphicon-arrow-up"></span>
@@ -40,14 +42,15 @@
               <span class="glyphicon glyphicon-arrow-right"></span>
               {{/case}}
             {{/switch}}
+            -->
           </td>
           <td>
           <aht-donut-graph
             height="35"
             width="35"
-            {healthy-data}="healthyData" 
-            {warning-data}="warningData" 
-            {danger-data}="dangerData" />
+            {healthy-data}="healthy" 
+            {warning-data}="warning" 
+            {danger-data}="danger" />
           </td>
         </tr>
         {{/each}}

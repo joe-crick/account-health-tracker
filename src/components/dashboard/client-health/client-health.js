@@ -33,7 +33,7 @@ export const ViewModel = DefineMap.extend({
           context.clients = clients;
         });
     }
-  },
+  }
 });
 
 export default Component.extend({
