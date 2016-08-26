@@ -1,5 +1,7 @@
 import DefineMap from 'can-define/map/';
 import Kpi from 'account-health-tracker/models/kpi';
+import {healthGroups} from 'account-health-tracker/enums/';
+import graphConfig from './graphConfig';
 
 export default DefineMap.extend({
   /**
@@ -24,14 +26,11 @@ export default DefineMap.extend({
    */
   kpiPromise: {
     get() {
-      return new Promise((resolve) => {
-        resolve({});
-      });
-      // const context = this;
-      // return Kpi.getList({})
-      //   .then((Kpi) => {
-      //     context.Kpi = Kpi;
-      //   });
+      const context = this;
+      return Kpi.getList({})
+        .then((kpi) => {
+          context.kpis = kpi;
+        });
     }
   },
   /**
@@ -69,5 +68,27 @@ export default DefineMap.extend({
    */
   overflowContainerWidth: {
     value: 0
+  },
+  dataColumns: {
+    get() {
+      const healthyData = [healthGroups.healthy];
+      const warningData = [healthGroups.warning];
+      const dangerData = [healthGroups.danger];
+      const labelData = [graphConfig.xAxis.label];
+
+      this.kpis.forEach((kpi) => {
+        healthyData.push(kpi[healthGroups.healthy]);
+        warningData.push(kpi[healthGroups.warning]);
+        dangerData.push(kpi[healthGroups.danger]);
+        labelData.push(kpi.name);
+      });
+
+      return [
+        healthyData,
+        warningData,
+        dangerData,
+        labelData
+      ];
+    }
   }
 });

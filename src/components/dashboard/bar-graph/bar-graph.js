@@ -45,7 +45,7 @@ export default Component.extend({
       viewModel.chartWidth = viewModel.barGraphContainer.clientWidth;
       viewModel.leftPosition = 0;
       // Generate a blank graph, which will be populated once the data loads
-      viewModel.chart = generateGraph(viewModel.barGraphContainer, viewModel.kpis);
+      viewModel.chart = generateGraph(viewModel.barGraphContainer, viewModel.dataColumns);
     },
     /**
      * @description destroy chart on remove
@@ -72,10 +72,12 @@ export default Component.extend({
      * @param kpis
      */
     '{viewModel} kpis': function (viewModel, ev, kpis) {
-      viewModel.chart.load({
-        columns: kpis,
-        unload: viewModel.chart.columns
-      });
+      if (viewModel.chart) {
+        viewModel.chart.load({
+          columns: kpis,
+          unload: viewModel.chart.columns
+        });
+      }
     }
   },
   helpers: {
@@ -91,7 +93,7 @@ export default Component.extend({
      * @returns {string}
      */
     isRightScrollDisabled() {
-      const rightScrollLimit = chartRightScrollLimit.call(this);
+      const rightScrollLimit = chartRightScrollLimit(this);
       return Math.abs(this.leftPosition) < rightScrollLimit ? '' : 'disabled';
     }
   }
