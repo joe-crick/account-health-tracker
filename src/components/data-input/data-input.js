@@ -29,6 +29,13 @@ import './data-input.less';
 import template from './data-input.stache';
 
 export const ViewModel = DefineMap.extend({
+  valueOptions: {
+    value: [
+      'healthy',
+      'warning',
+      'danger'
+    ]
+  }
 });
 
 export default Component.extend({

@@ -1,6 +1,0 @@
-<fieldset>
-  <legend>{{legend}}</legend>
-  {{#each valueOptions}}
-      <span><input type="radio" name="{{name}}" ($click)="setSelectedValue(.)" /> {{.}}</span>
-  {{/each}}
-</fieldset>

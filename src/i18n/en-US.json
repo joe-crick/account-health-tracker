@@ -47,6 +47,14 @@
           "export": "Export"
         }
       }
-    }
+    },
+    "dataEntry": {
+      "form": {
+        "submit": "Submit"
+      }
+    },
+    "healthy": "Healthy",
+    "warning": "Warning",
+    "danger": "Danger"
   }
 }

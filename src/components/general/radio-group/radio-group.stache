@@ -1,0 +1,10 @@
+<fieldset>
+  <legend>{{legend}}</legend>
+  {{#each valueOptions}}
+    <span>
+      <label> {{i18n .}}
+        <input type="radio" name="{{group.name}}" ($click)="setSelectedValue(.)"/>
+      </label>
+    </span>
+  {{/each}}
+</fieldset>

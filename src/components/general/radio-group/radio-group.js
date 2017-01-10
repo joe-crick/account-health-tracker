@@ -1,24 +1,24 @@
 /**
- * @module {Module} account-health-tracker/components/dashboard/data-entry-item <aht-data-entry-item>
+ * @module {Module} account-health-tracker/components/dashboard/data-entry-item <aht-radio-group>
  * @parent js.components
  *
  * @group account-health-tracker/components/general/data-entry-item.properties 4 properties
  *
  * @description Displays a data-entry-item.
  *
- * @signature `<aht-data-entry-item/>`
- *   Creates an data entry item
+ * @signature `<aht-radio-group/>`
+ *   Creates an aht radio group
  *
  * @body
  *
- * To create a `<aht-data-entry-item>` element, include it in your page
+ * To create a `<aht-radio-group>` element, include it in your page
  *
  * ```
- * <aht-data-entry-item
+ * <aht-radio-group
  *    legend="Testius with Buttonius"
- *    field-names="Amet sit dolor ipsum lorraine"
- *    value="anything">
- * </aht-data-entry-item>
+ *    {value-options}=[1,2,3]
+ *    {^selected-value}="anything">
+ * </aht-radio-group>
  * ```
  *
  * ## Example
@@ -28,13 +28,15 @@
  */
 import Component from 'can-component';
 import DefineMap from 'can-define/map/';
-import './data-entry-item.less';
-import template from './data-entry-item.stache';
+import './radio-group.less';
+import template from './radio-group.stache';
 
 export const ViewModel = DefineMap.extend({
   selectedValue: {},
-  name: {
-    value: Math.random().toString()
+  group: {
+    Value: function () {
+      return {name: Math.random().toString()};
+    }
   },
   /**
    * Sets the selected value of the component
@@ -46,7 +48,7 @@ export const ViewModel = DefineMap.extend({
 });
 
 export default Component.extend({
-  tag: 'aht-data-entry-item',
+  tag: 'aht-radio-group',
   ViewModel,
   template
 });

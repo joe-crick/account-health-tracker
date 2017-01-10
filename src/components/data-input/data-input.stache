@@ -1,0 +1,13 @@
+<can-import from="account-health-tracker/components/general/radio-group/" />
+
+<div>
+  <h1>{{company}}
+    <small>({{project}})</small>
+  </h1>
+  <form>
+    {{#each metrics}}
+      <aht-radio-group {legend}="legend" {^selected-value}="selectedValue" {value-options}="valueOptions"/>
+    {{/each}}
+    <button class="btn btn-primary">{{i18n 'dataEntry.form.submit'}}</button>
+  </form>
+</div>
