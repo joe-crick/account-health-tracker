@@ -34,7 +34,7 @@ import template from './radio-group.stache';
 export const ViewModel = DefineMap.extend({
   selectedValue: {},
   group: {
-    Value: function () {
+    Value: function Value() {
       return {name: Math.random().toString()};
     }
   },
