@@ -29,6 +29,7 @@ import './data-input.less';
 import template from './data-input.stache';
 
 export const ViewModel = DefineMap.extend({
+  // TODO: Pull from a config or a dB
   valueOptions: {
     value: [
       'healthy',
