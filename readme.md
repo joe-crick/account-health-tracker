@@ -2,6 +2,8 @@
 
 # account-health-tracker
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/joe-crick/account-health-tracker.svg)](https://greenkeeper.io/)
+
 Welcome to the account-health-tracker DoneJS application!
 
 The Account Health Tracker allows a user to view the account health of clients and projects for a
